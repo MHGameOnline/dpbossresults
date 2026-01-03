@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Live Matka Results</title>
+<title>DPBOSS Results – Today</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -10,11 +10,59 @@
 <body>
 
 <header>
-  <h1>LIVE MATKA RESULTS</h1>
+  <h1>DPBOSS RESULTS</h1>
   <div id="todayDate"></div>
 </header>
 
-<main id="gamesList"></main>
+<main>
+
+<!-- GAME CARD START -->
+
+<script>
+const games = [
+  ["RAJA-RANI MORNING","257-49-379","09:40 AM - 10:40 AM","https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"],
+  ["KARNATAKA DAY","159-55-690","10:00 AM - 11:00 AM","https://sattamatkadpboss.co/karnataka-day-panel-chart.php"],
+  ["KALYAN MORNING","469-97-160","11:00 AM - 12:02 PM","https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php"],
+  ["MADHUR MORNING","669-15-159","11:35 AM - 12:35 PM","https://sattamatkadpboss.co/madhur-morning-penal-chart.php"],
+  ["SRIDEVI","250-78-170","11:35 AM - 12:35 PM","https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php"],
+  ["MAHARANI","489-13-157","12:15 PM - 02:15 PM","https://sattamatkadpboss.co/maharani-panel-chart.php"],
+  ["TIME BAZAR","136-08-990","01:00 PM - 02:00 PM","https://sattamatkadpboss.co/time-bazar-panel-chart.php"],
+  ["MADHUR DAY","188-75-041","01:30 PM - 02:30 PM","https://sattamatkadpboss.co/madhur-day-panel-chart.php"],
+  ["PRABHAT","230-50-550","01:30 PM - 03:00 PM","https://sattamatkadpboss.co/record/prabhat-panel-chart.php"],
+  ["KANNADA DAY","189-87-368","01:30 PM - 02:30 PM","https://sattamatkadpboss.co/record/rithi-sridevi-panel-chart.php"],
+  ["MILAN DAY","139-33-247","03:00 PM - 05:00 PM","https://sattamatkadpboss.co/record/milan-day-penal-chart.php"],
+  ["RAJDHANI DAY","345-23-256","03:00 PM - 05:00 PM","https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php"],
+  ["SUPREME DAY","135-92-147","03:35 PM - 05:35 PM","https://sattamatkadpboss.co/supreme-day-panel-chart.php"],
+  ["KALYAN","267-52-200","03:45 PM - 05:45 PM","https://sattamatkadpboss.co/record/kalyan-penal-chart.php"],
+  ["MAHARANI DAY","180-96-259","05:15 PM - 07:15 PM","https://sattamatkadpboss.co/maharani-day-panel-chart.php"],
+  ["KARNATAKA NIGHT","600-61-100","06:35 PM - 07:35 PM","https://sattamatkadpboss.co/karnataka-night-panel-chart.php"],
+  ["SRIDEVI NIGHT","334-07-377","07:15 PM - 08:15 PM","https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php"],
+  ["PRABHAT NIGHT","689-30-370","08:30 PM - 10:30 PM","https://sattamatkadpboss.co/record/prabhat-night-panel-chart.php"],
+  ["SUPREME NIGHT","178-64-149","08:45 PM - 10:45 PM","https://sattamatkadpboss.co/supreme-night-panel-chart.php"],
+  ["MADHUR NIGHT","230-53-238","08:30 PM - 10:30 PM","https://sattamatkadpboss.co/madhur-night-panel-chart.php"],
+  ["MILAN NIGHT","678-11-236","09:10 PM - 11:10 PM","https://sattamatkadpboss.co/record/milan-night-penal-chart.php"],
+  ["RAJDHANI NIGHT","123-64-699","09:30 PM - 11:45 PM","https://sattamatkadpboss.co/record/rajdhani-night-penal-chart.php"],
+  ["KALYAN NIGHT","190-03-120","09:20 PM - 11:20 PM","https://sattamatkadpboss.co/record/kalyan-night-penal-chart.php"],
+  ["MAIN BAZAR","240-65-690","09:35 PM - 12:05 AM","https://sattamatkadpboss.co/main-bazar-panel-chart.php"],
+  ["MAHARANI NIGHT","380-15-159","10:15 PM - 12:15 AM","https://sattamatkadpboss.co/maharani-night-panel-chart.php"]
+];
+
+const container = document.querySelector("main");
+
+games.forEach(g => {
+  container.innerHTML += `
+  <div class="game-card" onclick="window.open('${g[3]}','_blank')">
+    <div class="game-top">
+      <div class="game-name">${g[0]}</div>
+      <a class="mini-wa" href="https://wa.me/918956490113" target="_blank" onclick="event.stopPropagation()">आज का फ्री गेम</a>
+    </div>
+    <div class="result">${g[1]}</div>
+    <div class="time">(${g[2]})</div>
+  </div>`;
+});
+</script>
+
+</main>
 
 <!-- Floating WhatsApp -->
 <div class="whatsapp">
@@ -24,91 +72,8 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* ---------- DATE ---------- */
-  const dateBox = document.getElementById("todayDate");
-  if (dateBox) {
-    dateBox.innerText = "📅 " + new Date().toDateString();
-  }
-
-  const gamesList = document.getElementById("gamesList");
-  if (!gamesList) return;
-
-  const now = new Date();
-  const today = now.getDay(); // 0=Sun
-  const baseNowMin = now.getHours() * 60 + now.getMinutes();
-
-  function toMin(t) {
-    const p = t.split(":");
-    return (+p[0]) * 60 + (+p[1]);
-  }
-
-  function ampm(t) {
-    let [h, m] = t.split(":").map(Number);
-    const ap = h >= 12 ? "PM" : "AM";
-    h = h % 12 || 12;
-    return h + ":" + String(m).padStart(2, "0") + " " + ap;
-  }
-
-  function worksToday(rule) {
-    if (rule === "ALL") return true;
-    if (rule === "MF") return today >= 1 && today <= 5;
-    if (rule === "MS") return today >= 1 && today <= 6;
-    return false;
-  }
-
-  const games = [
-    {n:"RAJA-RANI MORNING",o:"09:40",c:"10:40",r:"257-49-379",l:"https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php",d:"ALL"},
-    {n:"KARNATAKA DAY",o:"10:00",c:"11:00",r:"159-55-690",l:"https://sattamatkadpboss.co/karnataka-day-panel-chart.php",d:"ALL"},
-    {n:"KALYAN MORNING",o:"11:00",c:"12:02",r:"469-97-160",l:"https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",d:"ALL"},
-    {n:"MADHUR MORNING",o:"11:35",c:"12:35",r:"669-15-159",l:"https://sattamatkadpboss.co/madhur-morning-panel-chart.php",d:"ALL"},
-    {n:"SRIDEVI",o:"11:35",c:"12:35",r:"250-78-170",l:"https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",d:"ALL"},
-    {n:"MAHARANI",o:"12:15",c:"14:15",r:"489-13-157",l:"https://sattamatkadpboss.co/maharani-panel-chart.php",d:"ALL"},
-    {n:"TIME BAZAR",o:"13:00",c:"14:00",r:"136-08-990",l:"https://sattamatkadpboss.co/time-bazar-panel-chart.php",d:"ALL"},
-    {n:"MADHUR DAY",o:"13:30",c:"14:30",r:"188-75-041",l:"https://sattamatkadpboss.co/madhur-day-panel-chart.php",d:"ALL"},
-    {n:"PRABHAT",o:"13:30",c:"15:00",r:"230-50-550",l:"https://sattamatkadpboss.co/record/prabhat-panel-chart.php",d:"MS"},
-    {n:"MILAN DAY",o:"15:00",c:"17:00",r:"139-33-247",l:"https://sattamatkadpboss.co/record/milan-day-penal-chart.php",d:"ALL"},
-    {n:"KALYAN NIGHT",o:"21:20",c:"23:20",r:"190-03-120",l:"https://sattamatkadpboss.co/record/kalyan-night-penal-chart.php",d:"MF"},
-    {n:"MAIN BAZAR",o:"21:35",c:"00:05",r:"240-65-690",l:"https://sattamatkadpboss.co/main-bazar-panel-chart.php",d:"MF"}
-  ];
-
-  games.forEach(g => {
-    let open = toMin(g.o);
-    let close = toMin(g.c);
-    let nowMin = baseNowMin;
-
-    if (close < open) {
-      close += 1440;
-      if (nowMin < open) nowMin += 1440;
-    }
-
-    const live = worksToday(g.d) && nowMin >= open && nowMin <= close;
-
-    const card = document.createElement("div");
-    card.className = "game-card" + (live ? "" : " closed");
-
-    card.innerHTML = `
-      <div class="game-top">
-        <div class="game-name">
-          ${g.n}
-          ${live ? '<span class="live">LIVE</span>' : '<span class="closed-tag">CLOSED</span>'}
-        </div>
-        <a class="mini-wa" href="https://wa.me/918956490113" target="_blank"
-           onclick="event.stopPropagation()">आज का फ्री गेम</a>
-      </div>
-      <div class="result"><strong>${g.r}</strong></div>
-      <div class="time">(${ampm(g.o)} - ${ampm(g.c)})</div>
-    `;
-
-    card.onclick = function () {
-      window.open(g.l, "_blank");
-    };
-
-    gamesList.appendChild(card);
-  });
-
-});
+document.getElementById("todayDate").innerText =
+  "📅 " + new Date().toDateString();
 </script>
 
 </body>
