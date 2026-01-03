@@ -5,7 +5,7 @@
 <title>LIVE MATKA RESULTS TODAY</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Live Matka Results Today. Get free VVIP game on WhatsApp.">
+<meta name="description" content="Live Matka Results Today – Aaj Ka Free Game WhatsApp Par">
 <meta name="robots" content="index, follow">
 
 <link rel="stylesheet" href="./style.css">
@@ -13,13 +13,11 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>LIVE MATKA RESULTS</h1>
   <div id="todayDate"></div>
 </header>
 
-<!-- MAIN -->
 <main>
   <div id="gamesList"></div>
 </main>
@@ -33,22 +31,37 @@
 <div id="popup">
   <div class="popup-box">
     <span onclick="closePopup()">✖</span>
-    <h3>GET TODAY’S VVIP GAME FREE</h3>
+    <h3>आज का VVIP गेम FREE</h3>
     <a class="popup-btn" href="https://wa.me/918956490113" target="_blank">
-      WhatsApp Now
+      WhatsApp करें
     </a>
   </div>
 </div>
 
 <script>
-/* ---------- SAFE LOAD ---------- */
 window.onload = function () {
 
-  /* DATE */
+  /* ---------- DATE ---------- */
   document.getElementById("todayDate").innerHTML =
     "📅 " + new Date().toDateString();
 
-  /* GAMES DATA */
+  /* ---------- HELPERS ---------- */
+  function toMinutes(time) {
+    const [h, m] = time.split(":").map(Number);
+    return h * 60 + m;
+  }
+
+  function formatAMPM(time) {
+    let [h, m] = time.split(":").map(Number);
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
+    return `${h}:${m.toString().padStart(2, "0")} ${ampm}`;
+  }
+
+  const now = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+
+  /* ---------- GAMES ---------- */
   const games = [
     {name:"RAJA-RANI MORNING",open:"09:40",close:"10:40",result:"257-49-379",link:"https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"},
     {name:"KARNATAKA DAY",open:"10:00",close:"11:00",result:"159-55-690",link:"https://sattamatkadpboss.co/karnataka-day-panel-chart.php"},
@@ -80,24 +93,31 @@ window.onload = function () {
   const container = document.getElementById("gamesList");
 
   games.forEach(game => {
+    const openMin = toMinutes(game.open);
+    let closeMin = toMinutes(game.close);
+    if (closeMin < openMin) closeMin += 1440;
+
+    const isLive = nowMinutes >= openMin && nowMinutes <= closeMin;
+
     const card = document.createElement("div");
-    card.className = "game-card";
+    card.className = "game-card" + (isLive ? "" : " closed");
 
     card.innerHTML = `
       <div class="game-top">
         <div class="game-name">
-          ${game.name} <span class="live">LIVE</span>
+          ${game.name}
+          ${isLive ? '<span class="live">LIVE</span>' : '<span class="closed-tag">CLOSED</span>'}
         </div>
-        <a class="mini-wa" href="https://wa.me/918956490113" target="_blank">Get Free Game</a>
+        <a class="mini-wa" href="https://wa.me/918956490113" target="_blank"
+           onclick="event.stopPropagation()">आज का फ्री गेम</a>
       </div>
       <div class="result"><strong>${game.result}</strong></div>
-      <div class="time">(${game.open} - ${game.close})</div>
+      <div class="time">
+        (${formatAMPM(game.open)} - ${formatAMPM(game.close)})
+      </div>
     `;
 
-    card.addEventListener("click", function () {
-      window.open(game.link, "_blank");
-    });
-
+    card.onclick = () => window.open(game.link, "_blank");
     container.appendChild(card);
   });
 
