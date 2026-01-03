@@ -1,29 +1,60 @@
-<script>
-window.onload = function () {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Live Matka Results</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
 
-  document.getElementById("todayDate").innerHTML =
-    "📅 " + new Date().toDateString();
+<body>
+
+<header>
+  <h1>LIVE MATKA RESULTS</h1>
+  <div id="todayDate"></div>
+</header>
+
+<main id="gamesList"></main>
+
+<!-- Floating WhatsApp -->
+<div class="whatsapp">
+  <a href="https://wa.me/918956490113" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ---------- DATE ---------- */
+  const dateBox = document.getElementById("todayDate");
+  if (dateBox) {
+    dateBox.innerText = "📅 " + new Date().toDateString();
+  }
+
+  const gamesList = document.getElementById("gamesList");
+  if (!gamesList) return;
 
   const now = new Date();
-  const todayDay = now.getDay(); // 0=Sun
+  const today = now.getDay(); // 0=Sun
   const baseNowMin = now.getHours() * 60 + now.getMinutes();
 
-  function toMin(t){
-    const [h,m]=t.split(":").map(Number);
-    return h*60+m;
+  function toMin(t) {
+    const p = t.split(":");
+    return (+p[0]) * 60 + (+p[1]);
   }
 
-  function ampm(t){
-    let [h,m]=t.split(":").map(Number);
-    const a=h>=12?"PM":"AM";
-    h=h%12||12;
-    return `${h}:${m.toString().padStart(2,"0")} ${a}`;
+  function ampm(t) {
+    let [h, m] = t.split(":").map(Number);
+    const ap = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
+    return h + ":" + String(m).padStart(2, "0") + " " + ap;
   }
 
-  function worksToday(rule){
-    if(rule==="ALL") return true;
-    if(rule==="MF") return todayDay>=1 && todayDay<=5;
-    if(rule==="MS") return todayDay>=1 && todayDay<=6;
+  function worksToday(rule) {
+    if (rule === "ALL") return true;
+    if (rule === "MF") return today >= 1 && today <= 5;
+    if (rule === "MS") return today >= 1 && today <= 6;
     return false;
   }
 
@@ -31,61 +62,54 @@ window.onload = function () {
     {n:"RAJA-RANI MORNING",o:"09:40",c:"10:40",r:"257-49-379",l:"https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php",d:"ALL"},
     {n:"KARNATAKA DAY",o:"10:00",c:"11:00",r:"159-55-690",l:"https://sattamatkadpboss.co/karnataka-day-panel-chart.php",d:"ALL"},
     {n:"KALYAN MORNING",o:"11:00",c:"12:02",r:"469-97-160",l:"https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",d:"ALL"},
-    {n:"MADHUR MORNING",o:"11:35",c:"12:35",r:"669-15-159",l:"https://sattamatkadpboss.co/madhur-morning-penal-chart.php",d:"ALL"},
+    {n:"MADHUR MORNING",o:"11:35",c:"12:35",r:"669-15-159",l:"https://sattamatkadpboss.co/madhur-morning-panel-chart.php",d:"ALL"},
     {n:"SRIDEVI",o:"11:35",c:"12:35",r:"250-78-170",l:"https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",d:"ALL"},
     {n:"MAHARANI",o:"12:15",c:"14:15",r:"489-13-157",l:"https://sattamatkadpboss.co/maharani-panel-chart.php",d:"ALL"},
     {n:"TIME BAZAR",o:"13:00",c:"14:00",r:"136-08-990",l:"https://sattamatkadpboss.co/time-bazar-panel-chart.php",d:"ALL"},
     {n:"MADHUR DAY",o:"13:30",c:"14:30",r:"188-75-041",l:"https://sattamatkadpboss.co/madhur-day-panel-chart.php",d:"ALL"},
     {n:"PRABHAT",o:"13:30",c:"15:00",r:"230-50-550",l:"https://sattamatkadpboss.co/record/prabhat-panel-chart.php",d:"MS"},
-    {n:"KANNADA DAY",o:"13:30",c:"14:30",r:"189-87-368",l:"https://sattamatkadpboss.co/record/rithi-sridevi-panel-chart.php",d:"ALL"},
     {n:"MILAN DAY",o:"15:00",c:"17:00",r:"139-33-247",l:"https://sattamatkadpboss.co/record/milan-day-penal-chart.php",d:"ALL"},
-    {n:"RAJDHANI DAY",o:"15:00",c:"17:00",r:"345-23-256",l:"https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",d:"MS"},
-    {n:"SUPREME DAY",o:"15:35",c:"17:35",r:"135-92-147",l:"https://sattamatkadpboss.co/supreme-day-panel-chart.php",d:"ALL"},
-    {n:"KALYAN",o:"15:45",c:"17:45",r:"267-52-200",l:"https://sattamatkadpboss.co/record/kalyan-penal-chart.php",d:"MS"},
-    {n:"MAHARANI DAY",o:"17:15",c:"19:15",r:"180-96-259",l:"https://sattamatkadpboss.co/maharani-day-panel-chart.php",d:"ALL"},
-    {n:"KARNATAKA NIGHT",o:"18:35",c:"19:35",r:"600-61-100",l:"https://sattamatkadpboss.co/karnataka-night-panel-chart.php",d:"ALL"},
-    {n:"SRIDEVI NIGHT",o:"19:15",c:"20:15",r:"334-07-377",l:"https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php",d:"ALL"},
-    {n:"PRABHAT NIGHT",o:"20:30",c:"22:30",r:"689-30-370",l:"https://sattamatkadpboss.co/record/prabhat-night-panel-chart.php",d:"MF"},
-    {n:"SUPREME NIGHT",o:"20:45",c:"22:45",r:"178-64-149",l:"https://sattamatkadpboss.co/supreme-night-panel-chart.php",d:"ALL"},
-    {n:"MADHUR NIGHT",o:"20:30",c:"22:30",r:"230-53-238",l:"https://sattamatkadpboss.co/madhur-night-panel-chart.php",d:"MS"},
-    {n:"MILAN NIGHT",o:"21:10",c:"23:10",r:"678-11-236",l:"https://sattamatkadpboss.co/record/milan-night-penal-chart.php",d:"MS"},
-    {n:"RAJDHANI NIGHT",o:"21:30",c:"23:45",r:"123-64-699",l:"https://sattamatkadpboss.co/record/rajdhani-night-penal-chart.php",d:"MF"},
     {n:"KALYAN NIGHT",o:"21:20",c:"23:20",r:"190-03-120",l:"https://sattamatkadpboss.co/record/kalyan-night-penal-chart.php",d:"MF"},
-    {n:"MAIN BAZAR",o:"21:35",c:"00:05",r:"240-65-690",l:"https://sattamatkadpboss.co/main-bazar-panel-chart.php",d:"MF"},
-    {n:"MAHARANI NIGHT",o:"22:15",c:"00:15",r:"380-15-159",l:"https://sattamatkadpboss.co/maharani-night-panel-chart.php",d:"ALL"}
+    {n:"MAIN BAZAR",o:"21:35",c:"00:05",r:"240-65-690",l:"https://sattamatkadpboss.co/main-bazar-panel-chart.php",d:"MF"}
   ];
 
-  const box = document.getElementById("gamesList");
-
-  games.forEach(g=>{
+  games.forEach(g => {
     let open = toMin(g.o);
     let close = toMin(g.c);
     let nowMin = baseNowMin;
 
-    if(close < open){
+    if (close < open) {
       close += 1440;
-      if(nowMin < open) nowMin += 1440;
+      if (nowMin < open) nowMin += 1440;
     }
 
     const live = worksToday(g.d) && nowMin >= open && nowMin <= close;
 
-    const card=document.createElement("div");
-    card.className="game-card"+(live?"":" closed");
+    const card = document.createElement("div");
+    card.className = "game-card" + (live ? "" : " closed");
 
-    card.innerHTML=`
+    card.innerHTML = `
       <div class="game-top">
         <div class="game-name">
           ${g.n}
-          ${live?'<span class="live">LIVE</span>':'<span class="closed-tag">CLOSED</span>'}
+          ${live ? '<span class="live">LIVE</span>' : '<span class="closed-tag">CLOSED</span>'}
         </div>
         <a class="mini-wa" href="https://wa.me/918956490113" target="_blank"
            onclick="event.stopPropagation()">आज का फ्री गेम</a>
       </div>
       <div class="result"><strong>${g.r}</strong></div>
-      <div class="time">(${ampm(g.o)} - ${ampm(g.c)})</div>`;
+      <div class="time">(${ampm(g.o)} - ${ampm(g.c)})</div>
+    `;
 
-    card.onclick=()=>window.open(g.l,"_blank");
-    box.appendChild(card);
+    card.onclick = function () {
+      window.open(g.l, "_blank");
+    };
+
+    gamesList.appendChild(card);
   });
-};
+
+});
 </script>
+
+</body>
+</html>
