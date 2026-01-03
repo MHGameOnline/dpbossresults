@@ -42,12 +42,12 @@ main {
 
 .game-card.closed {
   opacity: 0.6;
-  cursor: not-allowed;
 }
 
 .game-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .game-name {
