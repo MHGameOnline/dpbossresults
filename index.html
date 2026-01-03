@@ -1,0 +1,185 @@
+<script>
+/* ---------------- DATE ---------------- */
+const today = new Date();
+document.getElementById("todayDate").innerText =
+"📅 " + today.toDateString();
+
+/* ---------------- GAMES DATA (UPDATED) ---------------- */
+const games = [
+  {
+    name: "RAJA-RANI MORNING",
+    open: "09:40",
+    close: "10:40",
+    result: "257-49-379",
+    link: "https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"
+  },
+  {
+    name: "KARNATAKA DAY",
+    open: "10:00",
+    close: "11:00",
+    result: "159-55-690",
+    link: "https://sattamatkadpboss.co/karnataka-day-panel-chart.php"
+  },
+  {
+    name: "KALYAN MORNING",
+    open: "11:00",
+    close: "12:02",
+    result: "469-97-160",
+    link: "https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php"
+  },
+  {
+    name: "MADHUR MORNING",
+    open: "11:35",
+    close: "12:35",
+    result: "669-15-159",
+    link: "https://sattamatkadpboss.co/madhur-morning-penal-chart.php"
+  },
+  {
+    name: "SRIDEVI",
+    open: "11:35",
+    close: "12:35",
+    result: "250-78-170",
+    link: "https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php"
+  },
+  {
+    name: "MAHARANI",
+    open: "12:15",
+    close: "14:15",
+    result: "489-13-157",
+    link: "https://sattamatkadpboss.co/maharani-panel-chart.php"
+  },
+  {
+    name: "TIME BAZAR",
+    open: "13:00",
+    close: "14:00",
+    result: "136-08-990",
+    link: "https://sattamatkadpboss.co/time-bazar-panel-chart.php"
+  },
+  {
+    name: "MADHUR DAY",
+    open: "13:30",
+    close: "14:30",
+    result: "188-75-041",
+    link: "https://sattamatkadpboss.co/madhur-day-panel-chart.php"
+  },
+  {
+    name: "PRABHAT",
+    open: "13:30",
+    close: "15:00",
+    result: "230-50-550",
+    link: "https://sattamatkadpboss.co/record/prabhat-panel-chart.php"
+  },
+  {
+    name: "KANNADA DAY",
+    open: "13:30",
+    close: "14:30",
+    result: "189-87-368",
+    link: "https://sattamatkadpboss.co/record/rithi-sridevi-panel-chart.php"
+  },
+  {
+    name: "MILAN DAY",
+    open: "15:00",
+    close: "17:00",
+    result: "139-33-247",
+    link: "https://sattamatkadpboss.co/record/milan-day-penal-chart.php"
+  },
+  {
+    name: "RAJDHANI DAY",
+    open: "15:00",
+    close: "17:00",
+    result: "345-23-256",
+    link: "https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php"
+  },
+  {
+    name: "SUPREME DAY",
+    open: "15:35",
+    close: "17:35",
+    result: "135-92-147",
+    link: "https://sattamatkadpboss.co/supreme-day-panel-chart.php"
+  },
+  {
+    name: "KALYAN",
+    open: "15:45",
+    close: "17:45",
+    result: "267-52-200",
+    link: "https://sattamatkadpboss.co/record/kalyan-penal-chart.php"
+  },
+  {
+    name: "MAHARANI DAY",
+    open: "17:15",
+    close: "19:15",
+    result: "180-96-259",
+    link: "https://sattamatkadpboss.co/maharani-day-panel-chart.php"
+  },
+  {
+    name: "KARNATAKA NIGHT",
+    open: "18:35",
+    close: "19:35",
+    result: "600-61-100",
+    link: "https://sattamatkadpboss.co/karnataka-night-panel-chart.php"
+  },
+  {
+    name: "SRIDEVI NIGHT",
+    open: "19:15",
+    close: "20:15",
+    result: "334-07-377",
+    link: "https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php"
+  },
+  {
+    name: "PRABHAT NIGHT",
+    open: "20:30",
+    close: "22:30",
+    result: "689-30-370",
+    link: "https://sattamatkadpboss.co/record/prabhat-night-panel-chart.php"
+  },
+  {
+    name: "SUPREME NIGHT",
+    open: "20:45",
+    close: "22:45",
+    result: "178-64-149",
+    link: "https://sattamatkadpboss.co/supreme-night-panel-chart.php"
+  },
+  {
+    name: "MADHUR NIGHT",
+    open: "20:30",
+    close: "22:30",
+    result: "230-53-238",
+    link: "https://sattamatkadpboss.co/madhur-night-panel-chart.php"
+  },
+  {
+    name: "MILAN NIGHT",
+    open: "21:10",
+    close: "23:10",
+    result: "678-11-236",
+    link: "https://sattamatkadpboss.co/record/milan-night-penal-chart.php"
+  },
+  {
+    name: "RAJDHANI NIGHT",
+    open: "21:30",
+    close: "23:45",
+    result: "123-64-699",
+    link: "https://sattamatkadpboss.co/record/rajdhani-night-penal-chart.php"
+  },
+  {
+    name: "KALYAN NIGHT",
+    open: "21:20",
+    close: "23:20",
+    result: "190-03-120",
+    link: "https://sattamatkadpboss.co/record/kalyan-night-penal-chart.php"
+  },
+  {
+    name: "MAIN BAZAR",
+    open: "21:35",
+    close: "00:05",
+    result: "240-65-690",
+    link: "https://sattamatkadpboss.co/main-bazar-panel-chart.php"
+  },
+  {
+    name: "MAHARANI NIGHT",
+    open: "22:15",
+    close: "00:15",
+    result: "380-15-159",
+    link: "https://sattamatkadpboss.co/maharani-night-panel-chart.php"
+  }
+];
+</script>
