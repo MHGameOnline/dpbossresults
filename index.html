@@ -3,11 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LIVE MATKA RESULTS TODAY</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Live Matka Results Today – Aaj Ka Free Game WhatsApp Par">
-<meta name="robots" content="index, follow">
-
 <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -22,113 +18,86 @@
   <div id="gamesList"></div>
 </main>
 
-<!-- FLOATING WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/918956490113" target="_blank">
-  <img src="./whatsapp.png" alt="WhatsApp">
+  <img src="./whatsapp.png">
 </a>
-
-<!-- POPUP -->
-<div id="popup">
-  <div class="popup-box">
-    <span onclick="closePopup()">✖</span>
-    <h3>आज का VVIP गेम FREE</h3>
-    <a class="popup-btn" href="https://wa.me/918956490113" target="_blank">
-      WhatsApp करें
-    </a>
-  </div>
-</div>
 
 <script>
 window.onload = function () {
 
-  /* ---------- DATE ---------- */
   document.getElementById("todayDate").innerHTML =
     "📅 " + new Date().toDateString();
 
-  /* ---------- HELPERS ---------- */
-  function toMinutes(time) {
-    const [h, m] = time.split(":").map(Number);
-    return h * 60 + m;
+  const today = new Date();
+  const day = today.getDay(); // 0=Sun, 1=Mon ... 6=Sat
+  const nowMin = today.getHours() * 60 + today.getMinutes();
+
+  function toMin(t){ const [h,m]=t.split(":").map(Number); return h*60+m; }
+  function ampm(t){
+    let [h,m]=t.split(":").map(Number);
+    const a=h>=12?"PM":"AM"; h=h%12||12;
+    return `${h}:${m.toString().padStart(2,"0")} ${a}`;
   }
 
-  function formatAMPM(time) {
-    let [h, m] = time.split(":").map(Number);
-    const ampm = h >= 12 ? "PM" : "AM";
-    h = h % 12 || 12;
-    return `${h}:${m.toString().padStart(2, "0")} ${ampm}`;
+  function worksToday(rule){
+    if(rule==="ALL") return true;
+    if(rule==="MF") return day>=1 && day<=5;
+    if(rule==="MS") return day>=1 && day<=6;
+    return false;
   }
 
-  const now = new Date();
-  const nowMinutes = now.getHours() * 60 + now.getMinutes();
-
-  /* ---------- GAMES ---------- */
   const games = [
-    {name:"RAJA-RANI MORNING",open:"09:40",close:"10:40",result:"257-49-379",link:"https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"},
-    {name:"KARNATAKA DAY",open:"10:00",close:"11:00",result:"159-55-690",link:"https://sattamatkadpboss.co/karnataka-day-panel-chart.php"},
-    {name:"KALYAN MORNING",open:"11:00",close:"12:02",result:"469-97-160",link:"https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php"},
-    {name:"MADHUR MORNING",open:"11:35",close:"12:35",result:"669-15-159",link:"https://sattamatkadpboss.co/madhur-morning-penal-chart.php"},
-    {name:"SRIDEVI",open:"11:35",close:"12:35",result:"250-78-170",link:"https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php"},
-    {name:"MAHARANI",open:"12:15",close:"14:15",result:"489-13-157",link:"https://sattamatkadpboss.co/maharani-panel-chart.php"},
-    {name:"TIME BAZAR",open:"13:00",close:"14:00",result:"136-08-990",link:"https://sattamatkadpboss.co/time-bazar-panel-chart.php"},
-    {name:"MADHUR DAY",open:"13:30",close:"14:30",result:"188-75-041",link:"https://sattamatkadpboss.co/madhur-day-panel-chart.php"},
-    {name:"PRABHAT",open:"13:30",close:"15:00",result:"230-50-550",link:"https://sattamatkadpboss.co/record/prabhat-panel-chart.php"},
-    {name:"KANNADA DAY",open:"13:30",close:"14:30",result:"189-87-368",link:"https://sattamatkadpboss.co/record/rithi-sridevi-panel-chart.php"},
-    {name:"MILAN DAY",open:"15:00",close:"17:00",result:"139-33-247",link:"https://sattamatkadpboss.co/record/milan-day-penal-chart.php"},
-    {name:"RAJDHANI DAY",open:"15:00",close:"17:00",result:"345-23-256",link:"https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php"},
-    {name:"SUPREME DAY",open:"15:35",close:"17:35",result:"135-92-147",link:"https://sattamatkadpboss.co/supreme-day-panel-chart.php"},
-    {name:"KALYAN",open:"15:45",close:"17:45",result:"267-52-200",link:"https://sattamatkadpboss.co/record/kalyan-penal-chart.php"},
-    {name:"MAHARANI DAY",open:"17:15",close:"19:15",result:"180-96-259",link:"https://sattamatkadpboss.co/maharani-day-panel-chart.php"},
-    {name:"KARNATAKA NIGHT",open:"18:35",close:"19:35",result:"600-61-100",link:"https://sattamatkadpboss.co/karnataka-night-panel-chart.php"},
-    {name:"SRIDEVI NIGHT",open:"19:15",close:"20:15",result:"334-07-377",link:"https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php"},
-    {name:"PRABHAT NIGHT",open:"20:30",close:"22:30",result:"689-30-370",link:"https://sattamatkadpboss.co/record/prabhat-night-panel-chart.php"},
-    {name:"SUPREME NIGHT",open:"20:45",close:"22:45",result:"178-64-149",link:"https://sattamatkadpboss.co/supreme-night-panel-chart.php"},
-    {name:"MADHUR NIGHT",open:"20:30",close:"22:30",result:"230-53-238",link:"https://sattamatkadpboss.co/madhur-night-panel-chart.php"},
-    {name:"MILAN NIGHT",open:"21:10",close:"23:10",result:"678-11-236",link:"https://sattamatkadpboss.co/record/milan-night-penal-chart.php"},
-    {name:"RAJDHANI NIGHT",open:"21:30",close:"23:45",result:"123-64-699",link:"https://sattamatkadpboss.co/record/rajdhani-night-penal-chart.php"},
-    {name:"KALYAN NIGHT",open:"21:20",close:"23:20",result:"190-03-120",link:"https://sattamatkadpboss.co/record/kalyan-night-penal-chart.php"},
-    {name:"MAIN BAZAR",open:"21:35",close:"00:05",result:"240-65-690",link:"https://sattamatkadpboss.co/main-bazar-panel-chart.php"},
-    {name:"MAHARANI NIGHT",open:"22:15",close:"00:15",result:"380-15-159",link:"https://sattamatkadpboss.co/maharani-night-panel-chart.php"}
+    {n:"RAJA-RANI MORNING",o:"09:40",c:"10:40",r:"257-49-379",l:"https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php",d:"ALL"},
+    {n:"KARNATAKA DAY",o:"10:00",c:"11:00",r:"159-55-690",l:"https://sattamatkadpboss.co/karnataka-day-panel-chart.php",d:"ALL"},
+    {n:"KALYAN MORNING",o:"11:00",c:"12:02",r:"469-97-160",l:"https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",d:"ALL"},
+    {n:"MADHUR MORNING",o:"11:35",c:"12:35",r:"669-15-159",l:"https://sattamatkadpboss.co/madhur-morning-penal-chart.php",d:"ALL"},
+    {n:"SRIDEVI",o:"11:35",c:"12:35",r:"250-78-170",l:"https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",d:"ALL"},
+    {n:"MAHARANI",o:"12:15",c:"14:15",r:"489-13-157",l:"https://sattamatkadpboss.co/maharani-panel-chart.php",d:"ALL"},
+    {n:"TIME BAZAR",o:"13:00",c:"14:00",r:"136-08-990",l:"https://sattamatkadpboss.co/time-bazar-panel-chart.php",d:"ALL"},
+    {n:"MADHUR DAY",o:"13:30",c:"14:30",r:"188-70-569",l:"https://sattamatkadpboss.co/madhur-day-panel-chart.php",d:"ALL"},
+    {n:"PRABHAT",o:"13:30",c:"15:00",r:"230-59-270",l:"https://sattamatkadpboss.co/record/prabhat-panel-chart.php",d:"MS"},
+    {n:"KANNADA DAY",o:"13:30",c:"14:30",r:"189-87-368",l:"https://sattamatkadpboss.co/record/rithi-sridevi-panel-chart.php",d:"ALL"},
+    {n:"MILAN DAY",o:"15:00",c:"17:00",r:"268-66-268",l:"https://sattamatkadpboss.co/record/milan-day-penal-chart.php",d:"ALL"},
+    {n:"RAJDHANI DAY",o:"15:00",c:"17:00",r:"389-01-470",l:"https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",d:"MS"},
+    {n:"SUPREME DAY",o:"15:35",c:"17:35",r:"178-60-479",l:"https://sattamatkadpboss.co/supreme-day-panel-chart.php",d:"ALL"},
+    {n:"KALYAN",o:"15:45",c:"17:45",r:"880-6-",l:"https://sattamatkadpboss.co/record/kalyan-penal-chart.php",d:"MS"},
+    {n:"MAHARANI DAY",o:"17:15",c:"19:15",r:"358-6-",l:"https://sattamatkadpboss.co/maharani-day-panel-chart.php",d:"ALL"},
+    {n:"KARNATAKA NIGHT",o:"18:35",c:"19:35",r:"600-61-100",l:"https://sattamatkadpboss.co/karnataka-night-panel-chart.php",d:"ALL"},
+    {n:"SRIDEVI NIGHT",o:"19:15",c:"20:15",r:"334-07-377",l:"https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php",d:"ALL"},
+    {n:"PRABHAT NIGHT",o:"20:30",c:"22:30",r:"689-30-370",l:"https://sattamatkadpboss.co/record/prabhat-night-panel-chart.php",d:"MF"},
+    {n:"SUPREME NIGHT",o:"20:45",c:"22:45",r:"178-64-149",l:"https://sattamatkadpboss.co/supreme-night-panel-chart.php",d:"ALL"},
+    {n:"MADHUR NIGHT",o:"20:30",c:"22:30",r:"230-53-238",l:"https://sattamatkadpboss.co/madhur-night-panel-chart.php",d:"MS"},
+    {n:"MILAN NIGHT",o:"21:10",c:"23:10",r:"678-11-236",l:"https://sattamatkadpboss.co/record/milan-night-penal-chart.php",d:"MS"},
+    {n:"RAJDHANI NIGHT",o:"21:30",c:"23:45",r:"123-64-699",l:"https://sattamatkadpboss.co/record/rajdhani-night-penal-chart.php",d:"MF"},
+    {n:"KALYAN NIGHT",o:"21:20",c:"23:20",r:"190-03-120",l:"https://sattamatkadpboss.co/record/kalyan-night-penal-chart.php",d:"MF"},
+    {n:"MAIN BAZAR",o:"21:35",c:"00:05",r:"240-65-690",l:"https://sattamatkadpboss.co/main-bazar-panel-chart.php",d:"MF"},
+    {n:"MAHARANI NIGHT",o:"22:15",c:"00:15",r:"380-15-159",l:"https://sattamatkadpboss.co/maharani-night-panel-chart.php",d:"ALL"}
   ];
 
-  const container = document.getElementById("gamesList");
+  const box = document.getElementById("gamesList");
 
-  games.forEach(game => {
-    const openMin = toMinutes(game.open);
-    let closeMin = toMinutes(game.close);
-    if (closeMin < openMin) closeMin += 1440;
+  games.forEach(g=>{
+    let open=toMin(g.o), close=toMin(g.c);
+    if(close<open) close+=1440;
+    const live = worksToday(g.d) && nowMin>=open && nowMin<=close;
 
-    const isLive = nowMinutes >= openMin && nowMinutes <= closeMin;
-
-    const card = document.createElement("div");
-    card.className = "game-card" + (isLive ? "" : " closed");
-
-    card.innerHTML = `
+    const card=document.createElement("div");
+    card.className="game-card"+(live?"":" closed");
+    card.innerHTML=`
       <div class="game-top">
         <div class="game-name">
-          ${game.name}
-          ${isLive ? '<span class="live">LIVE</span>' : '<span class="closed-tag">CLOSED</span>'}
+          ${g.n}
+          ${live?'<span class="live">LIVE</span>':'<span class="closed-tag">CLOSED</span>'}
         </div>
         <a class="mini-wa" href="https://wa.me/918956490113" target="_blank"
            onclick="event.stopPropagation()">आज का फ्री गेम</a>
       </div>
-      <div class="result"><strong>${game.result}</strong></div>
-      <div class="time">
-        (${formatAMPM(game.open)} - ${formatAMPM(game.close)})
-      </div>
-    `;
-
-    card.onclick = () => window.open(game.link, "_blank");
-    container.appendChild(card);
+      <div class="result"><strong>${g.r}</strong></div>
+      <div class="time">(${ampm(g.o)} - ${ampm(g.c)})</div>`;
+    card.onclick=()=>window.open(g.l,"_blank");
+    box.appendChild(card);
   });
-
-  setTimeout(() => {
-    document.getElementById("popup").style.display = "flex";
-  }, 4000);
 };
-
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
 </script>
 
 </body>
