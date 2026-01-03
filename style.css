@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f1f1;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+header {
+  background: orange;
+  text-align: center;
+  padding: 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#todayDate {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+main {
+  padding: 14px;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.game-card.closed {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.game-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.live {
+  background: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  animation: blink 1s infinite;
+}
+
+.closed-tag {
+  background: #555;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.result {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.time {
+  font-size: 12px;
+  color: #555;
+}
+
+.mini-wa {
+  background: #25D366;
+  color: white;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Floating WhatsApp */
+.whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+}
+
+.whatsapp img {
+  width: 56px;
+}
+
+/* Popup */
+#popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 280px;
+  position: relative;
+}
+
+.popup-box span {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.popup-btn {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+}
