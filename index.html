@@ -1,48 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>LIVE MATKA RESULTS TODAY</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-
-<header>
-  <h1>LIVE MATKA RESULTS</h1>
-  <div id="todayDate"></div>
-</header>
-
-<main>
-  <div id="gamesList"></div>
-</main>
-
-<a class="whatsapp" href="https://wa.me/918956490113" target="_blank">
-  <img src="./whatsapp.png">
-</a>
-
 <script>
 window.onload = function () {
 
   document.getElementById("todayDate").innerHTML =
     "📅 " + new Date().toDateString();
 
-  const today = new Date();
-  const day = today.getDay(); // 0=Sun, 1=Mon ... 6=Sat
-  const nowMin = today.getHours() * 60 + today.getMinutes();
+  const now = new Date();
+  const todayDay = now.getDay(); // 0=Sun
+  const baseNowMin = now.getHours() * 60 + now.getMinutes();
 
-  function toMin(t){ const [h,m]=t.split(":").map(Number); return h*60+m; }
+  function toMin(t){
+    const [h,m]=t.split(":").map(Number);
+    return h*60+m;
+  }
+
   function ampm(t){
     let [h,m]=t.split(":").map(Number);
-    const a=h>=12?"PM":"AM"; h=h%12||12;
+    const a=h>=12?"PM":"AM";
+    h=h%12||12;
     return `${h}:${m.toString().padStart(2,"0")} ${a}`;
   }
 
   function worksToday(rule){
     if(rule==="ALL") return true;
-    if(rule==="MF") return day>=1 && day<=5;
-    if(rule==="MS") return day>=1 && day<=6;
+    if(rule==="MF") return todayDay>=1 && todayDay<=5;
+    if(rule==="MS") return todayDay>=1 && todayDay<=6;
     return false;
   }
 
@@ -54,14 +35,14 @@ window.onload = function () {
     {n:"SRIDEVI",o:"11:35",c:"12:35",r:"250-78-170",l:"https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",d:"ALL"},
     {n:"MAHARANI",o:"12:15",c:"14:15",r:"489-13-157",l:"https://sattamatkadpboss.co/maharani-panel-chart.php",d:"ALL"},
     {n:"TIME BAZAR",o:"13:00",c:"14:00",r:"136-08-990",l:"https://sattamatkadpboss.co/time-bazar-panel-chart.php",d:"ALL"},
-    {n:"MADHUR DAY",o:"13:30",c:"14:30",r:"188-70-569",l:"https://sattamatkadpboss.co/madhur-day-panel-chart.php",d:"ALL"},
-    {n:"PRABHAT",o:"13:30",c:"15:00",r:"230-59-270",l:"https://sattamatkadpboss.co/record/prabhat-panel-chart.php",d:"MS"},
+    {n:"MADHUR DAY",o:"13:30",c:"14:30",r:"188-75-041",l:"https://sattamatkadpboss.co/madhur-day-panel-chart.php",d:"ALL"},
+    {n:"PRABHAT",o:"13:30",c:"15:00",r:"230-50-550",l:"https://sattamatkadpboss.co/record/prabhat-panel-chart.php",d:"MS"},
     {n:"KANNADA DAY",o:"13:30",c:"14:30",r:"189-87-368",l:"https://sattamatkadpboss.co/record/rithi-sridevi-panel-chart.php",d:"ALL"},
-    {n:"MILAN DAY",o:"15:00",c:"17:00",r:"268-66-268",l:"https://sattamatkadpboss.co/record/milan-day-penal-chart.php",d:"ALL"},
-    {n:"RAJDHANI DAY",o:"15:00",c:"17:00",r:"389-01-470",l:"https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",d:"MS"},
-    {n:"SUPREME DAY",o:"15:35",c:"17:35",r:"178-60-479",l:"https://sattamatkadpboss.co/supreme-day-panel-chart.php",d:"ALL"},
-    {n:"KALYAN",o:"15:45",c:"17:45",r:"880-6-",l:"https://sattamatkadpboss.co/record/kalyan-penal-chart.php",d:"MS"},
-    {n:"MAHARANI DAY",o:"17:15",c:"19:15",r:"358-6-",l:"https://sattamatkadpboss.co/maharani-day-panel-chart.php",d:"ALL"},
+    {n:"MILAN DAY",o:"15:00",c:"17:00",r:"139-33-247",l:"https://sattamatkadpboss.co/record/milan-day-penal-chart.php",d:"ALL"},
+    {n:"RAJDHANI DAY",o:"15:00",c:"17:00",r:"345-23-256",l:"https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",d:"MS"},
+    {n:"SUPREME DAY",o:"15:35",c:"17:35",r:"135-92-147",l:"https://sattamatkadpboss.co/supreme-day-panel-chart.php",d:"ALL"},
+    {n:"KALYAN",o:"15:45",c:"17:45",r:"267-52-200",l:"https://sattamatkadpboss.co/record/kalyan-penal-chart.php",d:"MS"},
+    {n:"MAHARANI DAY",o:"17:15",c:"19:15",r:"180-96-259",l:"https://sattamatkadpboss.co/maharani-day-panel-chart.php",d:"ALL"},
     {n:"KARNATAKA NIGHT",o:"18:35",c:"19:35",r:"600-61-100",l:"https://sattamatkadpboss.co/karnataka-night-panel-chart.php",d:"ALL"},
     {n:"SRIDEVI NIGHT",o:"19:15",c:"20:15",r:"334-07-377",l:"https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php",d:"ALL"},
     {n:"PRABHAT NIGHT",o:"20:30",c:"22:30",r:"689-30-370",l:"https://sattamatkadpboss.co/record/prabhat-night-panel-chart.php",d:"MF"},
@@ -77,12 +58,20 @@ window.onload = function () {
   const box = document.getElementById("gamesList");
 
   games.forEach(g=>{
-    let open=toMin(g.o), close=toMin(g.c);
-    if(close<open) close+=1440;
-    const live = worksToday(g.d) && nowMin>=open && nowMin<=close;
+    let open = toMin(g.o);
+    let close = toMin(g.c);
+    let nowMin = baseNowMin;
+
+    if(close < open){
+      close += 1440;
+      if(nowMin < open) nowMin += 1440;
+    }
+
+    const live = worksToday(g.d) && nowMin >= open && nowMin <= close;
 
     const card=document.createElement("div");
     card.className="game-card"+(live?"":" closed");
+
     card.innerHTML=`
       <div class="game-top">
         <div class="game-name">
@@ -94,11 +83,9 @@ window.onload = function () {
       </div>
       <div class="result"><strong>${g.r}</strong></div>
       <div class="time">(${ampm(g.o)} - ${ampm(g.c)})</div>`;
+
     card.onclick=()=>window.open(g.l,"_blank");
     box.appendChild(card);
   });
 };
 </script>
-
-</body>
-</html>
