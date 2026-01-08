@@ -4,44 +4,71 @@
 <meta charset="UTF-8">
 <title>DPBOSS Live Results – Today</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="style.css">
 
-<meta name="description" content="DPBOSS Today Lucky Numbers and Live Matka Results">
+<meta name="description" content="Today Matka Results with Lucky Numbers. Fast live results with charts and timings.">
+<meta name="keywords" content="dp boss results, matka result today, lucky numbers, kalyan matka">
 <meta name="robots" content="index, follow">
-</head>
 
+</head>
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>DPBOSS LIVE RESULTS TODAY</h1>
+  <h1>DPBOSS LIVE RESULTS – TODAY</h1>
   <div id="todayDate"></div>
 </header>
 
+<!-- BANNER -->
+<div class="banner-wrapper">
+  <img src="banner.jpg" alt="DPBoss Banner">
+
+  <!-- Desktop WhatsApp -->
+  <a href="https://wa.me/918956490113" target="_blank" class="wa-desktop">
+    📞 Contact Us
+  </a>
+</div>
+
+<!-- Mobile WhatsApp -->
+<a href="https://wa.me/918956490113" target="_blank" class="wa-mobile">
+  📞 Contact Us on WhatsApp
+</a>
+
 <main>
 
-<h2 class="section-title">🎯 Today’s Lucky Numbers</h2>
+<!-- TODAY LUCKY NUMBERS -->
+<h2 class="section-title">🔥 Today’s Lucky Numbers 🔥</h2>
+
 <div id="luckySection"></div>
 
+<!-- LIVE RESULTS -->
 <h2 class="section-title">📊 Today’s Live Results</h2>
+
 <div id="resultSection"></div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <p style="text-align:center;font-size:12px;padding:10px;">
-    ⚠ Disclaimer: Lucky numbers are for entertainment purposes only.
-  </p>
+⚠️ Disclaimer: Lucky numbers are for entertainment purposes only.
 </footer>
 
+<!-- FLOATING WHATSAPP -->
+<div class="whatsapp">
+  <a href="https://wa.me/918956490113" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
 <script>
-/* DATE & TIME */
+/* DATE + TIME */
 setInterval(() => {
   document.getElementById("todayDate").innerText =
-    "📅 " + new Date().toLocaleDateString() +
-    " ⏰ " + new Date().toLocaleTimeString();
+    "📅 " + new Date().toLocaleString();
 }, 1000);
 
-/* GAME DATA (SORTED BY OPEN TIME) */
+/* GAME DATA (TIME SEQUENCE) */
 const games = [
   ["RAJA-RANI MORNING","677-08-233","09:40 AM - 10:40 AM","https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"],
   ["SITA MORNING","238-31-489","09:45 AM - 10:45 AM","https://dpbosse.net/pannel/SITAMORNING/81"],
@@ -70,28 +97,36 @@ const games = [
   ["MAHARANI NIGHT","355-32-156","10:15 PM - 12:15 AM","https://sattamatkadpboss.co/maharani-night-panel-chart.php"]
 ];
 
-/* Lucky Numbers */
-const lucky = document.getElementById("luckySection");
+/* LUCKY NUMBERS */
+const luckyContainer = document.getElementById("luckySection");
 games.forEach(g => {
-  lucky.innerHTML += `
+  luckyContainer.innerHTML += `
     <div class="lucky-card">
       <div class="lucky-name">${g[0]}</div>
       <div class="lucky-numbers">1 2 3</div>
     </div>`;
 });
 
-/* Live Results */
-const results = document.getElementById("resultSection");
+/* LIVE RESULTS */
+const resultContainer = document.getElementById("resultSection");
 games.forEach(g => {
-  results.innerHTML += `
-    <div class="game-card" onclick="window.open('${g[3]}','_blank')">
-      <div class="game-top">
-        <div class="game-name">${g[0]}</div>
-        <a class="panel-btn" href="${g[3]}" target="_blank" onclick="event.stopPropagation()">PANEL</a>
-      </div>
-      <div class="result">${g[1]}</div>
-      <div class="time">(${g[2]})</div>
-    </div>`;
+  resultContainer.innerHTML += `
+  <div class="game-card" onclick="window.open('${g[3]}','_blank')">
+    <div class="game-top">
+      <div class="game-name">${g[0]}</div>
+      <a class="panel-btn" href="${g[3]}" target="_blank" onclick="event.stopPropagation()">PANEL</a>
+    </div>
+
+    <div class="result">${g[1]}</div>
+    <div class="time">(${g[2]})</div>
+
+    <a class="mini-wa"
+       href="https://wa.me/918956490113"
+       target="_blank"
+       onclick="event.stopPropagation()">
+       GET VVIP GAME FREE
+    </a>
+  </div>`;
 });
 </script>
 
