@@ -4,12 +4,7 @@ body {
   background: #f1f1f1;
 }
 
-.banner img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-}
-
+/* ================= HEADER ================= */
 header {
   background: orange;
   text-align: center;
@@ -25,12 +20,86 @@ header h1 {
 #todayDate {
   font-size: 13px;
   font-weight: bold;
+  margin-top: 4px;
 }
 
+/* ================= BANNER ================= */
+.banner-wrapper {
+  position: relative;
+}
+
+.banner-wrapper img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+/* WhatsApp on banner */
+.wa-desktop {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: #25D366;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.wa-mobile {
+  display: none;
+  background: #25D366;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================= MAIN ================= */
 main {
   padding: 14px;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 18px 0 12px;
+  font-weight: bold;
+}
+
+/* ================= BLINK (SINGLE, FIXED) ================= */
+@keyframes blink {
+  50% { opacity: 0.8; }
+}
+
+/* ================= LUCKY NUMBERS ================= */
+.lucky-card {
+  background: #ffe1e1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  animation: blink 1.2s infinite;
+}
+
+.lucky-name {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.lucky-numbers {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 12px;
+}
+
+/* ================= GAME CARDS ================= */
 .game-card {
   background: #fff;
   border-radius: 10px;
@@ -38,10 +107,6 @@ main {
   margin-bottom: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   cursor: pointer;
-}
-
-.game-card.closed {
-  opacity: 0.6;
 }
 
 .game-top {
@@ -55,32 +120,10 @@ main {
   font-weight: bold;
 }
 
-.live {
-  background: red;
-  color: white;
-  font-size: 11px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-left: 6px;
-  animation: blink 1s infinite;
-}
-
-.closed-tag {
-  background: #555;
-  color: #fff;
-  font-size: 11px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-left: 6px;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
 .result {
   margin-top: 8px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .time {
@@ -88,6 +131,22 @@ main {
   color: #555;
 }
 
+/* ================= PANEL BUTTON ================= */
+.panel-btn {
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.panel-btn:hover {
+  background: #333;
+}
+
+/* ================= MINI WHATSAPP ================= */
 .mini-wa {
   background: #25D366;
   color: white;
@@ -97,91 +156,19 @@ main {
   text-decoration: none;
 }
 
-/* Floating WhatsApp */
+/* ================= FLOATING WHATSAPP ================= */
 .whatsapp {
   position: fixed;
   right: 18px;
   bottom: 18px;
+  z-index: 9999;
 }
 
 .whatsapp img {
   width: 56px;
 }
 
-/* Popup */
-#popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-box {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 280px;
-  position: relative;
-}
-
-.popup-box span {
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.popup-btn {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 10px;
-}
-.banner-wrapper {
-  position: relative;
-}
-
-.banner-wrapper img {
-  width: 100%;
-  max-height: 280px;
-  object-fit: cover;
-}
-
-.wa-desktop {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  background: #25D366;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.wa-mobile {
-  display: none;
-  background: #25D366;
-  color: #fff;
-  text-align: center;
-  padding: 12px;
-  margin: 8px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.section-title {
-  text-align: center;
-  margin: 15px 0;
-}
-
+/* ================= FOOTER ================= */
 footer {
   background: #111;
   color: #ccc;
@@ -190,51 +177,10 @@ footer {
   font-size: 13px;
 }
 
-/* Mobile view */
+/* ================= MOBILE VIEW ================= */
 @media (max-width: 768px) {
   .wa-desktop { display: none; }
   .wa-mobile { display: block; }
 }
-.section-title {
-  text-align: center;
-  font-size: 20px;
-  margin: 18px 0 10px;
-  font-weight: bold;
-}
 
-/* Lucky Numbers Section */
-.lucky-card {
-  background: #ffe5e5;
-  border-radius: 10px;
-  padding: 14px;
-  margin-bottom: 12px;
-  text-align: center;
-  animation: blink 1s infinite;
-}
-
-.lucky-name {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.lucky-numbers {
-  font-size: 26px;
-  font-weight: bold;
-  letter-spacing: 10px;
-}
-
-@keyframes blink {
-  50% { opacity: 0.5; }
-}
-
-/* Panel Button */
-.panel-btn {
-  background: #000;
-  color: #fff;
-  font-size: 11px;
-  padding: 5px 8px;
-  border-radius: 6px;
-  text-decoration: none;
-}
 
