@@ -6,9 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 
-<meta name="description" content="Today DPBOSS Lucky Numbers and Live Matka Results">
+<meta name="description" content="DPBOSS Today Lucky Numbers and Live Matka Results">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mhgameonline.github.io/dpbossresults/">
 </head>
 
 <body>
@@ -18,66 +17,48 @@
   <div id="todayDate"></div>
 </header>
 
-<!-- BANNER -->
-<div class="banner-wrapper">
-  <img src="banner.jpg" alt="DPBOSS Banner">
-
-  <!-- Desktop WhatsApp -->
-  <a class="wa-desktop" href="https://wa.me/918956490113" target="_blank">
-    📞 Contact Us
-  </a>
-</div>
-
-<!-- Mobile WhatsApp -->
-<a class="wa-mobile" href="https://wa.me/918956490113" target="_blank">
-  📞 Contact Us on WhatsApp
-</a>
-
 <main>
 
-<!-- ================= LUCKY NUMBERS ================= -->
 <h2 class="section-title">🎯 Today’s Lucky Numbers</h2>
-
 <div id="luckySection"></div>
 
-<!-- ================= LIVE RESULTS ================= -->
 <h2 class="section-title">📊 Today’s Live Results</h2>
-
 <div id="resultSection"></div>
 
 </main>
 
 <footer>
-  <p>
+  <p style="text-align:center;font-size:12px;padding:10px;">
     ⚠ Disclaimer: Lucky numbers are for entertainment purposes only.
   </p>
 </footer>
 
 <script>
 /* DATE & TIME */
-function updateDateTime() {
+setInterval(() => {
   document.getElementById("todayDate").innerText =
     "📅 " + new Date().toLocaleDateString() +
     " ⏰ " + new Date().toLocaleTimeString();
-}
-setInterval(updateDateTime, 1000);
-updateDateTime();
+}, 1000);
 
-/* GAME DATA */
+/* GAME DATA (SORTED BY OPEN TIME) */
 const games = [
   ["RAJA-RANI MORNING","677-08-233","09:40 AM - 10:40 AM","https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"],
+  ["SITA MORNING","238-31-489","09:45 AM - 10:45 AM","https://dpbosse.net/pannel/SITAMORNING/81"],
   ["KARNATAKA DAY","478-93-490","10:00 AM - 11:00 AM","https://sattamatkadpboss.co/karnataka-day-panel-chart.php"],
   ["KALYAN MORNING","350-81-489","11:00 AM - 12:02 PM","https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php"],
   ["MADHUR MORNING","580-38-477","11:35 AM - 12:35 PM","https://sattamatkadpboss.co/madhur-morning-penal-chart.php"],
   ["SRIDEVI","280-08-468","11:35 AM - 12:35 PM","https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php"],
   ["MAHARANI","568-98-369","12:15 PM - 02:15 PM","https://sattamatkadpboss.co/maharani-panel-chart.php"],
   ["TIME BAZAR","899-65-140","01:00 PM - 02:00 PM","https://sattamatkadpboss.co/time-bazar-panel-chart.php"],
+  ["SITA DAY","700-76-240","01:45 PM - 02:45 PM","https://dpbosse.net/pannel/SITADAY/89"],
   ["MADHUR DAY","133-70-677","01:30 PM - 02:30 PM","https://sattamatkadpboss.co/madhur-day-panel-chart.php"],
   ["MILAN DAY","479-00-136","03:00 PM - 05:00 PM","https://sattamatkadpboss.co/record/milan-day-penal-chart.php"],
   ["RAJDHANI DAY","239-48-378","03:00 PM - 05:00 PM","https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php"],
   ["SUPREME DAY","230-59-270","03:35 PM - 05:35 PM","https://sattamatkadpboss.co/supreme-day-panel-chart.php"],
   ["KALYAN","367-65-168","03:45 PM - 05:45 PM","https://sattamatkadpboss.co/record/kalyan-penal-chart.php"],
   ["MAHARANI DAY","150-61-119","05:15 PM - 07:15 PM","https://sattamatkadpboss.co/maharani-day-panel-chart.php"],
+  ["SITA NIGHT","129-20-578","06:45 PM - 07:45 PM","https://dpbosse.net/pannel/SITANIGHT/109"],
   ["KARNATAKA NIGHT","345-24-239","06:35 PM - 07:35 PM","https://sattamatkadpboss.co/karnataka-night-panel-chart.php"],
   ["SRIDEVI NIGHT","689-36-123","07:15 PM - 08:15 PM","https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php"],
   ["SUPREME NIGHT","890-73-599","08:45 PM - 10:45 PM","https://sattamatkadpboss.co/supreme-night-panel-chart.php"],
@@ -90,26 +71,23 @@ const games = [
 ];
 
 /* Lucky Numbers */
-const luckyBox = document.getElementById("luckySection");
+const lucky = document.getElementById("luckySection");
 games.forEach(g => {
-  luckyBox.innerHTML += `
-    <div class="game-card">
-      <div class="game-name">${g[0]}</div>
-      <div class="lucky">1&nbsp;&nbsp;2&nbsp;&nbsp;3</div>
-      <div class="time">(${g[2]})</div>
+  lucky.innerHTML += `
+    <div class="lucky-card">
+      <div class="lucky-name">${g[0]}</div>
+      <div class="lucky-numbers">1 2 3</div>
     </div>`;
 });
 
 /* Live Results */
-const resultBox = document.getElementById("resultSection");
+const results = document.getElementById("resultSection");
 games.forEach(g => {
-  resultBox.innerHTML += `
+  results.innerHTML += `
     <div class="game-card" onclick="window.open('${g[3]}','_blank')">
       <div class="game-top">
         <div class="game-name">${g[0]}</div>
-        <a class="mini-wa" href="https://wa.me/918956490113" target="_blank" onclick="event.stopPropagation()">
-          VVIP GAME
-        </a>
+        <a class="panel-btn" href="${g[3]}" target="_blank" onclick="event.stopPropagation()">PANEL</a>
       </div>
       <div class="result">${g[1]}</div>
       <div class="time">(${g[2]})</div>
