@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 
-<meta name="description" content="Today DPBOSS Lucky Numbers & Live Matka Results. Kalyan, Milan, Rajdhani, Sridevi, Time Bazar, Madhur, Maharani results with timings.">
-<meta name="keywords" content="dpboss, dp boss results, lucky number today, matka results today">
+<meta name="description" content="Today DPBOSS Lucky Numbers and Live Matka Results">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mhgameonline.github.io/dpbossresults/">
 </head>
@@ -15,15 +14,13 @@
 <body>
 
 <header>
-  <h1>DPBOSS MATKA</h1>
-  <h2>Today's Results Live</h2>
-  <h3>FREE VVIP GAME TRICK</h3>
+  <h1>DPBOSS LIVE RESULTS TODAY</h1>
   <div id="todayDate"></div>
 </header>
 
 <!-- BANNER -->
 <div class="banner-wrapper">
-  <img src="banner.jpg" alt="DPBOSS Lucky Numbers Today">
+  <img src="banner.jpg" alt="DPBOSS Banner">
 
   <!-- Desktop WhatsApp -->
   <a class="wa-desktop" href="https://wa.me/918956490113" target="_blank">
@@ -38,9 +35,35 @@
 
 <main>
 
+<!-- ================= LUCKY NUMBERS ================= -->
 <h2 class="section-title">🎯 Today’s Lucky Numbers</h2>
 
+<div id="luckySection"></div>
+
+<!-- ================= LIVE RESULTS ================= -->
+<h2 class="section-title">📊 Today’s Live Results</h2>
+
+<div id="resultSection"></div>
+
+</main>
+
+<footer>
+  <p>
+    ⚠ Disclaimer: Lucky numbers are for entertainment purposes only.
+  </p>
+</footer>
+
 <script>
+/* DATE & TIME */
+function updateDateTime() {
+  document.getElementById("todayDate").innerText =
+    "📅 " + new Date().toLocaleDateString() +
+    " ⏰ " + new Date().toLocaleTimeString();
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+/* GAME DATA */
 const games = [
   ["RAJA-RANI MORNING","677-08-233","09:40 AM - 10:40 AM","https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"],
   ["KARNATAKA DAY","478-93-490","10:00 AM - 11:00 AM","https://sattamatkadpboss.co/karnataka-day-panel-chart.php"],
@@ -55,11 +78,6 @@ const games = [
   ["SUPREME DAY","230-59-270","03:35 PM - 05:35 PM","https://sattamatkadpboss.co/supreme-day-panel-chart.php"],
   ["KALYAN","367-65-168","03:45 PM - 05:45 PM","https://sattamatkadpboss.co/record/kalyan-penal-chart.php"],
   ["MAHARANI DAY","150-61-119","05:15 PM - 07:15 PM","https://sattamatkadpboss.co/maharani-day-panel-chart.php"],
-
-  ["SITA MORNING","LUCKY","09:45 AM - 10:45 AM","https://dpbosse.net/pannel/SITAMORNING/81"],
-  ["SITA DAY","LUCKY","01:45 PM - 02:45 PM","https://dpbosse.net/pannel/SITADAY/89"],
-  ["SITA NIGHT","LUCKY","06:45 PM - 07:45 PM","https://dpbosse.net/pannel/SITANIGHT/109"],
-
   ["KARNATAKA NIGHT","345-24-239","06:35 PM - 07:35 PM","https://sattamatkadpboss.co/karnataka-night-panel-chart.php"],
   ["SRIDEVI NIGHT","689-36-123","07:15 PM - 08:15 PM","https://sattamatkadpboss.co/record/sridevi-night-satta-penal-chart.php"],
   ["SUPREME NIGHT","890-73-599","08:45 PM - 10:45 PM","https://sattamatkadpboss.co/supreme-night-panel-chart.php"],
@@ -71,42 +89,32 @@ const games = [
   ["MAHARANI NIGHT","355-32-156","10:15 PM - 12:15 AM","https://sattamatkadpboss.co/maharani-night-panel-chart.php"]
 ];
 
-const container = document.createElement("div");
-
+/* Lucky Numbers */
+const luckyBox = document.getElementById("luckySection");
 games.forEach(g => {
-  container.innerHTML += `
-  <div class="game-card" onclick="window.open('${g[3]}','_blank')">
-    <div class="game-top">
+  luckyBox.innerHTML += `
+    <div class="game-card">
       <div class="game-name">${g[0]}</div>
-      <a class="mini-wa" href="https://wa.me/918956490113" target="_blank" onclick="event.stopPropagation()">
-        आज का VVIP GAME
-      </a>
-    </div>
-    <div class="result">${g[1]}</div>
-    <div class="time">(${g[2]})</div>
-  </div>`;
+      <div class="lucky">1&nbsp;&nbsp;2&nbsp;&nbsp;3</div>
+      <div class="time">(${g[2]})</div>
+    </div>`;
 });
 
-document.querySelector("main").appendChild(container);
-</script>
-
-</main>
-
-<footer>
-  <p>
-    ⚠ Disclaimer: All lucky numbers and results shown on this website are
-    for entertainment purposes only. We do not promote or support gambling.
-  </p>
-</footer>
-
-<script>
-function updateDateTime() {
-  const now = new Date();
-  document.getElementById("todayDate").innerText =
-    "📅 " + now.toLocaleDateString() + " ⏰ " + now.toLocaleTimeString();
-}
-setInterval(updateDateTime, 1000);
-updateDateTime();
+/* Live Results */
+const resultBox = document.getElementById("resultSection");
+games.forEach(g => {
+  resultBox.innerHTML += `
+    <div class="game-card" onclick="window.open('${g[3]}','_blank')">
+      <div class="game-top">
+        <div class="game-name">${g[0]}</div>
+        <a class="mini-wa" href="https://wa.me/918956490113" target="_blank" onclick="event.stopPropagation()">
+          VVIP GAME
+        </a>
+      </div>
+      <div class="result">${g[1]}</div>
+      <div class="time">(${g[2]})</div>
+    </div>`;
+});
 </script>
 
 </body>
