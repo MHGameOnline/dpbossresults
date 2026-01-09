@@ -2,9 +2,9 @@ const games = [
   {
     name: "RAJA-RANI MORNING",
     time: "09:00 AM - 10:00 AM",
-    result: "677-08-233",
+    result: "460-01-128",
     panel: "https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php",
-    lucky: [4, 7, 9]
+    lucky: [4, 6, 9]
   },
   {
     name: "SITA MORNING",
@@ -16,42 +16,42 @@ const games = [
   {
     name: "KARNATAKA DAY",
     time: "10:00 AM - 11:00 AM",
-    result: "478-93-490",
+    result: "240-64-266",
     panel: "https://sattamatkadpboss.co/karnataka-day-panel-chart.php",
     lucky: [2, 6, 9]
   },
   {
     name: "KALYAN MORNING",
     time: "11:00 AM - 12:00 PM",
-    result: "350-81-489",
+    result: "189-83-689",
     panel: "https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",
     lucky: [0, 5, 8]
   },
   {
     name: "MADHUR MORNING",
     time: "11:30 AM - 12:30 PM",
-    result: "580-38-477",
+    result: "390-20-578",
     panel: "https://sattamatkadpboss.co/madhur-morning-penal-chart.php",
     lucky: [3, 7, 9]
   },
   {
     name: "SRIDEVI",
     time: "12:00 PM - 01:00 PM",
-    result: "280-08-468",
+    result: "458-70-479",
     panel: "https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",
     lucky: [0, 6, 8]
   },
   {
     name: "MAHARANI",
     time: "12:30 PM - 01:30 PM",
-    result: "568-98-369",
+    result: "230-52-336",
     panel: "https://sattamatkadpboss.co/maharani-panel-chart.php",
     lucky: [5, 8, 9]
   },
   {
     name: "TIME BAZAR",
     time: "01:00 PM - 02:00 PM",
-    result: "899-65-140",
+    result: "138-28-260",
     panel: "https://sattamatkadpboss.co/time-bazar-panel-chart.php",
     lucky: [1, 4, 9]
   },
@@ -65,42 +65,42 @@ const games = [
   {
     name: "MADHUR DAY",
     time: "02:30 PM - 03:30 PM",
-    result: "133-70-677",
+    result: "360-97-890",
     panel: "https://sattamatkadpboss.co/madhur-day-panel-chart.php",
     lucky: [3, 6, 7]
   },
   {
     name: "MILAN DAY",
     time: "03:00 PM - 05:00 PM",
-    result: "479-00-136",
+    result: "112-46-349",
     panel: "https://sattamatkadpboss.co/record/milan-day-penal-chart.php",
     lucky: [0, 1, 9]
   },
   {
     name: "RAJDHANI DAY",
     time: "03:15 PM - 05:15 PM",
-    result: "239-48-378",
+    result: "367-64-130",
     panel: "https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",
     lucky: [2, 3, 8]
   },
   {
     name: "SUPREME DAY",
     time: "03:30 PM - 05:30 PM",
-    result: "230-59-270",
+    result: "468-87-359",
     panel: "https://sattamatkadpboss.co/supreme-day-panel-chart.php",
     lucky: [0, 5, 7]
   },
   {
     name: "KALYAN",
     time: "03:45 PM - 05:45 PM",
-    result: "367-65-168",
+    result: "145-04-770",
     panel: "https://sattamatkadpboss.co/record/kalyan-penal-chart.php",
     lucky: [3, 6, 8]
   },
   {
     name: "MAHARANI DAY",
     time: "04:00 PM - 06:00 PM",
-    result: "150-61-119",
+    result: "227-1",
     panel: "https://sattamatkadpboss.co/maharani-day-panel-chart.php",
     lucky: [1, 5, 9]
   },
@@ -175,3 +175,4 @@ const games = [
     lucky: [3, 5, 6]
   }
 ];
+
