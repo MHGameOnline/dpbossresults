@@ -34,6 +34,11 @@ header h1{margin:0;font-size:22px}
 .result{margin:8px 0}
 
 /* PANEL BUTTON */
+.game-time {
+  font-size: 13px;
+  color: #555;
+  margin-left: 6px;
+}
 .panel-btn{
   background:#FFD700;
   color:#000;
