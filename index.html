@@ -9,29 +9,21 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>DPBOSS LIVE RESULTS – TODAY</h1>
   <div id="todayDate"></div>
 </header>
 
-<!-- BANNER -->
 <div class="banner-wrapper">
   <img src="banner.jpg" alt="DPBoss Banner">
   <a href="https://wa.me/918956490113" target="_blank" class="wa-desktop">📞 Contact Us</a>
 </div>
 
-<a href="https://wa.me/918956490113" target="_blank" class="wa-mobile">
-📞 Contact Us on WhatsApp
-</a>
-
-<!-- WINNERS SECTION -->
 <section class="winner-section">
   <h2>⭐ Congratulations to our today's winners 🏆 🏆</h2>
   <div class="winner-box" id="winnerBox"></div>
   <div class="winner-cta">
-    अगले आप हो सकते हो...<br>
-    अभी ही संपर्क करे..
+    अगले आप हो सकते हो...<br>अभी ही संपर्क करे..
   </div>
   <a href="https://wa.me/918956490113" target="_blank" class="winner-wa">
     Contact Us
@@ -40,7 +32,6 @@
 
 <main>
 
-<!-- LUCKY NUMBERS -->
 <h2 class="section-title">🔥 Today’s Lucky Numbers 🔥</h2>
 <p class="lucky-sub">
 🏆आज के बाजार का आपका लकी नंबर... ⭐<br>
@@ -49,7 +40,6 @@
 
 <div id="luckySection"></div>
 
-<!-- LIVE RESULTS -->
 <h2 class="section-title">📊 Today’s Live Results</h2>
 <div id="resultSection"></div>
 
@@ -59,48 +49,38 @@
 ⚠️ Disclaimer: Lucky numbers are for entertainment purposes only.
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <div class="whatsapp">
   <a href="https://wa.me/918956490113" target="_blank">
     <img src="whatsapp.png" alt="WhatsApp">
   </a>
 </div>
 
-<!-- DATE & WINNERS -->
 <script>
-/* DATE TIME */
 setInterval(() => {
   document.getElementById("todayDate").innerText =
   "📅 " + new Date().toLocaleString();
 }, 1000);
 
-/* WINNERS ROTATION */
 const winners = [
-  "प्रवीण शिंदे (पुणे)<br>Thank you sir.<br>बहोत लॉस मे था..अपने कव्हर करके दिया..<br>दिलसे थँक्यू.🙏",
-  "भाऊसाहेब कदम (लातूर)<br>धन्यवाद सर,<br>आपने बहोत मदत की..<br>थँक्यू 🙏",
-  "संदीप पाटील (नाशिक)<br>Sir result perfect मिला..<br>धन्यवाद 🙏",
-  "अमोल जाधव (कोल्हापुर)<br>आज का दिन बन गया सर 🙏",
-  "राहुल देशमुख (औरंगाबाद)<br>100% सही गाइडेंस 🙏"
+  "प्रवीण शिंदे (पुणे)<br>दिलसे धन्यवाद 🙏",
+  "भाऊसाहेब कदम (लातूर)<br>थँक्यू सर 🙏",
+  "संदीप पाटील (नाशिक)<br>Perfect result 🙏",
+  "अमोल जाधव (कोल्हापुर)<br>100% गाइडेंस 🙏",
+  "राहुल देशमुख (औरंगाबाद)<br>Best service 🙏"
 ];
-let wIndex = 0;
-const box = document.getElementById("winnerBox");
-function showWinner(){
-  box.innerHTML = winners[wIndex];
-  wIndex = (wIndex + 1) % winners.length;
-}
-showWinner();
-setInterval(showWinner, 2000);
+let w = 0;
+setInterval(() => {
+  document.getElementById("winnerBox").innerHTML = winners[w];
+  w = (w + 1) % winners.length;
+}, 2000);
 </script>
 
-<!-- GAME DATA FILE -->
 <script src="game-data.js"></script>
 
-<!-- RENDER GAMES -->
 <script>
 const luckySection = document.getElementById("luckySection");
 const resultSection = document.getElementById("resultSection");
 
-/* LUCKY NUMBERS */
 games.forEach(g => {
   luckySection.innerHTML += `
     <div class="lucky-card">
@@ -113,12 +93,14 @@ games.forEach(g => {
     </div>`;
 });
 
-/* LIVE RESULTS */
 games.forEach(g => {
   resultSection.innerHTML += `
     <div class="game-card">
       <div class="game-top">
-        <div class="game-name">${g.name}</div>
+        <div class="game-name">
+          ${g.name}
+          <span class="game-time">(${g.time})</span>
+        </div>
         <a class="panel-btn" href="${g.panel}" target="_blank">PANEL</a>
       </div>
       <div class="result">${g.result}</div>
