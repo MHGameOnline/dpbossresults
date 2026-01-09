@@ -28,14 +28,11 @@
 <!-- WINNERS SECTION -->
 <section class="winner-section">
   <h2>⭐ Congratulations to our today's winners 🏆 🏆</h2>
-
   <div class="winner-box" id="winnerBox"></div>
-
   <div class="winner-cta">
     अगले आप हो सकते हो...<br>
     अभी ही संपर्क करे..
   </div>
-
   <a href="https://wa.me/918956490113" target="_blank" class="winner-wa">
     Contact Us
   </a>
@@ -76,7 +73,7 @@ setInterval(() => {
   "📅 " + new Date().toLocaleString();
 }, 1000);
 
-/* WINNERS DATA */
+/* WINNERS ROTATION */
 const winners = [
   "प्रवीण शिंदे (पुणे)<br>Thank you sir.<br>बहोत लॉस मे था..अपने कव्हर करके दिया..<br>दिलसे थँक्यू.🙏",
   "भाऊसाहेब कदम (लातूर)<br>धन्यवाद सर,<br>आपने बहोत मदत की..<br>थँक्यू 🙏",
@@ -84,18 +81,19 @@ const winners = [
   "अमोल जाधव (कोल्हापुर)<br>आज का दिन बन गया सर 🙏",
   "राहुल देशमुख (औरंगाबाद)<br>100% सही गाइडेंस 🙏"
 ];
-
 let wIndex = 0;
 const box = document.getElementById("winnerBox");
-
-function showWinner() {
+function showWinner(){
   box.innerHTML = winners[wIndex];
   wIndex = (wIndex + 1) % winners.length;
 }
 showWinner();
 setInterval(showWinner, 2000);
 
-/* GAME DATA */
+/* GAME DATA
+FORMAT:
+[name, result, time, panelLink]
+*/
 const games = [
 ["RAJA-RANI MORNING","677-08-233","https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php"],
 ["SITA MORNING","238-31-489","https://dpbosse.net/pannel/SITAMORNING/81"],
@@ -124,7 +122,7 @@ const games = [
 ["MAHARANI NIGHT","355-32-156","10:15 PM - 12:15 AM","https://sattamatkadpboss.co/maharani-night-panel-chart.php"]
 ];
 
-/* LUCKY */
+/* LUCKY NUMBERS */
 const lucky = document.getElementById("luckySection");
 games.forEach(g=>{
   lucky.innerHTML += `
@@ -136,20 +134,25 @@ games.forEach(g=>{
   </div>`;
 });
 
-/* RESULTS */
+/* LIVE RESULTS */
 const res = document.getElementById("resultSection");
 games.forEach(g=>{
   res.innerHTML += `
-  <div class="game-card" onclick="window.open('${g[2]}','_blank')">
+  <div class="game-card">
     <div class="game-top">
-      <div class="game-name">${g[0]}</div>
-      <a class="panel-btn" href="${g[2]}" target="_blank" onclick="event.stopPropagation()">PANEL</a>
+      <div class="game-name">
+        ${g[0]} <span class="game-time">(${g[2]})</span>
+      </div>
+      <a class="panel-btn" href="${g[3]}" target="_blank">PANEL</a>
     </div>
     <div class="result">${g[1]}</div>
-    <a class="mini-wa" href="https://wa.me/918956490113" target="_blank" onclick="event.stopPropagation()">GET VVIP GAME FREE</a>
+    <a class="mini-wa" href="https://wa.me/918956490113" target="_blank">
+      GET VVIP GAME FREE
+    </a>
   </div>`;
 });
 </script>
 
 </body>
 </html>
+
