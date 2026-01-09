@@ -1,182 +1,60 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f1f1f1;
-}
+body{margin:0;font-family:Arial;background:#f1f1f1}
 
 /* HEADER */
-header {
-  background: orange;
-  text-align: center;
-  padding: 12px;
-}
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-#todayDate {
-  font-size: 13px;
-  font-weight: bold;
-}
+header{background:orange;text-align:center;padding:12px}
+header h1{margin:0;font-size:22px}
+#todayDate{font-size:13px;font-weight:bold}
 
 /* BANNER */
-.banner-wrapper {
-  position: relative;
-}
-.banner-wrapper img {
-  width: 100%;
-  max-height: 280px;
-  object-fit: cover;
-}
-.wa-desktop {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  background: #25D366;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-.wa-mobile {
-  display: none;
-  background: #25D366;
-  color: #fff;
-  text-align: center;
-  padding: 12px;
-  margin: 8px;
-  border-radius: 8px;
-  text-decoration: none;
-}
+.banner-wrapper{position:relative}
+.banner-wrapper img{width:100%;max-height:280px;object-fit:cover}
+.wa-desktop{position:absolute;left:15px;top:15px;background:#25D366;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+.wa-mobile{display:none;background:#25D366;color:#fff;text-align:center;padding:12px;margin:8px;border-radius:8px;text-decoration:none}
 
 /* WINNERS */
-.winner-section {
-  background: #fff;
-  padding: 15px;
-  text-align: center;
-}
-.winner-box {
-  font-size: 15px;
-  margin: 10px 0;
-}
-.winner-cta {
-  font-weight: bold;
-  margin-top: 10px;
-}
-.winner-wa {
-  display: inline-block;
-  background: #25D366;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 8px;
-}
+.winner-section{background:#fff;padding:15px;text-align:center}
+.winner-box{margin:10px 0}
+.winner-cta{font-weight:bold}
+.winner-wa{display:inline-block;background:#25D366;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
 
 /* SECTIONS */
-.section-title {
-  text-align: center;
-  font-size: 20px;
-  margin: 18px 0 6px;
-  font-weight: bold;
-}
-.lucky-sub {
-  text-align: center;
-  font-size: 14px;
-}
+.section-title{text-align:center;font-size:20px;margin:18px 0 6px;font-weight:bold}
+.lucky-sub{text-align:center}
 
 /* LUCKY */
-.lucky-card {
-  background: #ffe5e5;
-  padding: 14px;
-  margin: 10px;
-  border-radius: 10px;
-  text-align: center;
-  animation: blink 1s infinite;
-}
-.lucky-name {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.lucky-circles span {
-  display: inline-block;
-  background: red;
-  color: #fff;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 50%;
-  margin: 4px;
-  font-weight: bold;
-}
+.lucky-card{background:#ffe5e5;padding:14px;margin:10px;border-radius:10px;text-align:center;animation:blink 1s infinite}
+.lucky-name{font-weight:bold}
+.lucky-circles span{display:inline-block;background:red;color:#fff;width:32px;height:32px;line-height:32px;border-radius:50%;margin:4px;font-weight:bold}
 
 /* RESULTS */
-.game-card {
-  background: #fff;
-  margin: 10px;
-  padding: 14px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-}
-.game-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.game-name {
-  font-weight: bold;
-}
-.result {
-  margin: 8px 0;
-}
-.panel-btn {
-  background: #ffd700;
-  color: #000;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  text-decoration: none;
+.game-card{background:#fff;margin:10px;padding:14px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,.15)}
+.game-top{display:flex;justify-content:space-between;align-items:center}
+.game-name{font-weight:bold}
+.game-time{font-size:12px;color:#555}
+.result{margin:8px 0}
+
+/* PANEL BUTTON */
+.panel-btn{
+  background:#FFD700;
+  color:#000;
+  font-weight:bold;
+  padding:6px 12px;
+  border-radius:6px;
+  text-decoration:none;
 }
 
-.game-time {
-  font-size: 12px;
-  color: #555;
-}
-.mini-wa {
-  display: inline-block;
-  background: #25D366;
-  color: #fff;
-  padding: 8px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-}
+/* WHATSAPP */
+.mini-wa{display:inline-block;background:#25D366;color:#fff;padding:8px 10px;border-radius:6px;text-decoration:none}
+.whatsapp{position:fixed;right:18px;bottom:18px}
+.whatsapp img{width:56px}
 
 /* FOOTER */
-footer {
-  background: #111;
-  color: #ccc;
-  padding: 15px;
-  text-align: center;
-  font-size: 13px;
-}
-
-/* FLOATING WA */
-.whatsapp {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-}
-.whatsapp img {
-  width: 56px;
-}
+footer{background:#111;color:#ccc;padding:15px;text-align:center;font-size:13px}
 
 /* MOBILE */
 @media(max-width:768px){
-  .wa-desktop{display:none;}
-  .wa-mobile{display:block;}
+  .wa-desktop{display:none}
+  .wa-mobile{display:block}
 }
 
-@keyframes blink {
-  50% { opacity: 0.6; }
-}
+@keyframes blink{50%{opacity:.6}}
