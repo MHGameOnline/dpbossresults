@@ -47,6 +47,19 @@ header h1{margin:0;font-size:22px}
   border-radius:6px;
   text-decoration:none;
 }
+.status {
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.live {
+  color: #0aa000;
+}
+
+.status.closed {
+  color: #d60000;
+}
 
 /* WHATSAPP */
 .mini-wa{display:inline-block;background:#25D366;color:#fff;padding:8px 10px;border-radius:6px;text-decoration:none}
