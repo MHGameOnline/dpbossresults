@@ -93,7 +93,7 @@ const games = [
   {
     name: "KALYAN",
     time: "03:45 PM - 05:45 PM",
-    result: "145-04-770",
+    result: "278-7",
     panel: "https://sattamatkadpboss.co/record/kalyan-penal-chart.php",
     lucky: [3, 6, 8]
   },
