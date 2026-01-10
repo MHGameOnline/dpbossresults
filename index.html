@@ -56,6 +56,7 @@
   </a>
 </div>
 
+<!-- DATE & WINNERS -->
 <script>
 setInterval(() => {
   document.getElementById("todayDate").innerText =
@@ -76,12 +77,28 @@ setInterval(() => {
 }, 2000);
 </script>
 
+<!-- GAME DATA -->
 <script src="game-data.js"></script>
 
+<!-- RENDER + LIVE/CLOSED LOGIC -->
 <script>
 const luckySection = document.getElementById("luckySection");
 const resultSection = document.getElementById("resultSection");
 
+/* GET LIVE / CLOSED STATUS */
+function getStatus(timeRange) {
+  const now = new Date();
+  const closePart = timeRange.split("-")[1].trim();
+  const closeTime = new Date(now.toDateString() + " " + closePart);
+
+  if (now < closeTime) {
+    return `<span class="status live">🟢 LIVE</span>`;
+  } else {
+    return `<span class="status closed">🔴 CLOSED</span>`;
+  }
+}
+
+/* LUCKY NUMBERS */
 games.forEach(g => {
   luckySection.innerHTML += `
     <div class="lucky-card">
@@ -94,22 +111,30 @@ games.forEach(g => {
     </div>`;
 });
 
-games.forEach(g => {
-  resultSection.innerHTML += `
-    <div class="game-card">
-      <div class="game-top">
-        <div class="game-name">
-          ${g.name}
-          <span class="game-time">(${g.time})</span>
+/* LIVE RESULTS */
+function renderResults() {
+  resultSection.innerHTML = "";
+  games.forEach(g => {
+    resultSection.innerHTML += `
+      <div class="game-card">
+        <div class="game-top">
+          <div class="game-name">
+            ${g.name}
+            <span class="game-time">(${g.time})</span>
+            ${getStatus(g.time)}
+          </div>
+          <a class="panel-btn" href="${g.panel}" target="_blank">PANEL</a>
         </div>
-        <a class="panel-btn" href="${g.panel}" target="_blank">PANEL</a>
-      </div>
-      <div class="result">${g.result}</div>
-      <a class="mini-wa" href="https://wa.me/918956490113" target="_blank">
-        GET VVIP GAME FREE
-      </a>
-    </div>`;
-});
+        <div class="result">${g.result}</div>
+        <a class="mini-wa" href="https://wa.me/918956490113" target="_blank">
+          GET VVIP GAME FREE
+        </a>
+      </div>`;
+  });
+}
+
+renderResults();
+setInterval(renderResults, 60000); // auto update every minute
 </script>
 
 </body>
