@@ -51,21 +51,21 @@ const games = [
   {
     name: "TIME BAZAR",
     time: "01:00 PM - 02:00 PM",
-    result: "138-28-260",
+    result: "690-53-256",
     panel: "https://sattamatkadpboss.co/time-bazar-panel-chart.php",
     lucky: [1, 4, 9]
   },
   {
     name: "SITA DAY",
     time: "02:00 PM - 03:00 PM",
-    result: "355-37-124",
+    result: "400-4",
     panel: "https://dpbosse.net/pannel/SITADAY/89",
     lucky: [0, 2, 7]
   },
   {
     name: "MADHUR DAY",
     time: "02:30 PM - 03:30 PM",
-    result: "360-97-890",
+    result: "234-9",
     panel: "https://sattamatkadpboss.co/madhur-day-panel-chart.php",
     lucky: [3, 6, 7]
   },
