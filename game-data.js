@@ -2,49 +2,49 @@ const games = [
   {
     name: "RAJA-RANI MORN",
     time: "09:00 AM - 10:00 AM",
-    result: "126-99-388",
+    result: "559-94-789",
     panel: "https://sattamatkadpboss.co/record/raja-rani-morning-panel-chart.php",
     lucky: [7, 6, 9]
   },
   {
     name: "SITA MORN",
     time: "09:45 AM - 10:45 AM",
-    result: "689-31-579",
+    result: "260-81-678",
     panel: "https://dpbosse.net/pannel/SITAMORNING/81",
     lucky: [1, 3, 8]
   },
   {
     name: "KARNATAKA DAY",
     time: "10:00 AM - 11:00 AM",
-    result: "248-41-245",
+    result: "470-13-445",
     panel: "https://sattamatkadpboss.co/karnataka-day-panel-chart.php",
     lucky: [2, 6, 9]
   },
   {
     name: "KALYAN MORN",
     time: "11:00 AM - 12:00 PM",
-    result: "240-62-570",
+    result: "289-9",
     panel: "https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",
     lucky: [0, 5, 8]
   },
   {
     name: "MADHUR MORN",
     time: "11:30 AM - 12:30 PM",
-    result: "269-79-450",
+    result: "356-4",
     panel: "https://sattamatkadpboss.co/madhur-morning-penal-chart.php",
     lucky: [3, 7, 9]
   },
   {
     name: "SRIDEVI",
     time: "12:00 PM - 01:00 PM",
-    result: "279-85-168",
+    result: "779-3",
     panel: "https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",
     lucky: [0, 6, 8]
   },
   {
     name: "MAHARANI",
     time: "12:30 PM - 01:30 PM",
-    result: "167-40-244",
+    result: "599-3",
     panel: "https://sattamatkadpboss.co/maharani-panel-chart.php",
     lucky: [5, 8, 9]
   },
