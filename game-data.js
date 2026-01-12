@@ -23,21 +23,21 @@ const games = [
   {
     name: "KALYAN MORN",
     time: "11:00 AM - 12:00 PM",
-    result: "289-9",
+    result: "289-93-355",
     panel: "https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",
     lucky: [0, 5, 8]
   },
   {
     name: "MADHUR MORN",
     time: "11:30 AM - 12:30 PM",
-    result: "356-4",
+    result: "356-45-357",
     panel: "https://sattamatkadpboss.co/madhur-morning-penal-chart.php",
     lucky: [3, 7, 9]
   },
   {
     name: "SRIDEVI",
     time: "12:00 PM - 01:00 PM",
-    result: "779-3",
+    result: "779-31-579",
     panel: "https://sattamatkadpboss.co/record/sridevi-satta-penal-chart.php",
     lucky: [0, 6, 8]
   },
@@ -51,21 +51,21 @@ const games = [
   {
     name: "TIME BAZAR",
     time: "01:00 PM - 02:00 PM",
-    result: "690-53-256",
+    result: "590-4",
     panel: "https://sattamatkadpboss.co/time-bazar-panel-chart.php",
     lucky: [1, 4, 9]
   },
   {
     name: "SITA DAY",
     time: "02:00 PM - 03:00 PM",
-    result: "156-23-157",
+    result: "120-3",
     panel: "https://dpbosse.net/pannel/SITADAY/89",
     lucky: [0, 2, 7]
   },
   {
     name: "MADHUR DAY",
     time: "02:30 PM - 03:30 PM",
-    result: "170-85-249",
+    result: "169-6",
     panel: "https://sattamatkadpboss.co/madhur-day-panel-chart.php",
     lucky: [3, 6, 7]
   },
