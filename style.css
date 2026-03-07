@@ -61,10 +61,7 @@ header h1{margin:0;font-size:22px}
   color: #d60000;
 }
 
-/* WHATSAPP */
-.mini-wa{display:inline-block;background:#25D366;color:#fff;padding:8px 10px;border-radius:6px;text-decoration:none}
-.whatsapp{position:fixed;right:18px;bottom:18px}
-.whatsapp img{width:56px}
+
 
 /* FOOTER */
 footer{background:#111;color:#ccc;padding:15px;text-align:center;font-size:13px}
@@ -72,90 +69,91 @@ footer{background:#111;color:#ccc;padding:15px;text-align:center;font-size:13px}
 /* MOBILE */
 @media(max-width:768px){
   .wa-desktop{display:none}
-  /* DOWNLOAD BUTTON BLINK ANIMATION */
+/* PREMIUM DOWNLOAD BUTTON */
 
 .download-btn{
+
 display:inline-flex;
 align-items:center;
 gap:6px;
-padding:8px 14px;
-background:#ff3b3b;
-color:#fff;
+padding:8px 16px;
+border-radius:8px;
 font-weight:bold;
-border-radius:6px;
 text-decoration:none;
-animation:blinkDownload 1s infinite;
+color:#fff;
+background:linear-gradient(
+90deg,
+#ff0000,
+#ff7300,
+#ff0000
+);
+
+background-size:200% auto;
+
+animation:downloadMove 2s linear infinite;
+
 }
 
-/* blinking glow */
-@keyframes blinkDownload{
+@keyframes downloadMove{
 
 0%{
-background:#ff3b3b;
-box-shadow:0 0 5px #ff3b3b;
-}
-
-50%{
-background:#ff0000;
-box-shadow:0 0 20px #ff0000,0 0 30px #ff4444;
+background-position:0% center;
 }
 
 100%{
-background:#ff3b3b;
-box-shadow:0 0 5px #ff3b3b;
+background-position:200% center;
 }
 
 }
-  .wa-mobile{display:block}
-}
-
-@keyframes blink{50%{opacity:.6}}
-/* DREAM11 STYLE INSTALL BANNER */
+/* TOP INSTALL BANNER */
 
 .app-banner{
 position:sticky;
 top:0;
 width:100%;
 background:#111;
-color:white;
+color:#fff;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:8px 12px;
+padding:8px 10px;
 z-index:9999;
-box-shadow:0 2px 10px rgba(0,0,0,0.3);
+box-sizing:border-box;
+flex-wrap:nowrap;
 }
 
 .app-banner-left{
 display:flex;
 align-items:center;
-gap:10px;
+gap:8px;
+min-width:0;
 }
 
 .app-banner img{
-height:36px;
-width:36px;
-border-radius:8px;
+height:32px;
+width:32px;
+border-radius:6px;
 }
 
 .app-title{
-font-size:14px;
+font-size:13px;
 font-weight:bold;
+line-height:1.2;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 }
 
 .install-btn{
 background:#00c853;
-color:white;
-padding:8px 16px;
-border-radius:20px;
+color:#fff;
+padding:6px 14px;
+border-radius:18px;
+font-size:13px;
 font-weight:bold;
 text-decoration:none;
-animation:installBlink 1.2s infinite;
+flex-shrink:0;
 }
-
-@keyframes installBlink{
-
-0%{transform:scale(1);}
   /* INSTALL POPUP */
 
 .install-popup{
@@ -210,44 +208,34 @@ to{transform:scale(1);}
 100%{transform:scale(1);}
 
 }
-.download-counter{
-background:#fff3cd;
-padding:8px;
-margin-top:5px;
-text-align:center;
-font-weight:bold;
-border-radius:6px;
-}
-.bottom-install-bar{
+/* BOTTOM INSTALL BAR */
 
+.bottom-install-bar{
 position:fixed;
 bottom:0;
 left:0;
 width:100%;
 background:#111;
-color:white;
+color:#fff;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:10px 15px;
+padding:8px 12px;
+box-sizing:border-box;
 z-index:9998;
-
 }
 
 .bottom-install-bar span{
-
-font-size:14px;
+font-size:13px;
 font-weight:bold;
-
 }
 
 .bottom-install-btn{
-
 background:#00c853;
-color:white;
-padding:8px 16px;
-border-radius:20px;
-text-decoration:none;
+color:#fff;
+padding:6px 14px;
+border-radius:18px;
+font-size:13px;
 font-weight:bold;
-
+text-decoration:none;
 }
