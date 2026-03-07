@@ -21,7 +21,9 @@
 <div class="app-banner-left">
 
 <img src="favicon.jpg">
-
+<div class="download-counter">
+🔥 <span id="downloadCount">142</span> users downloaded today
+</div>
 <div class="app-title">
 Shree Balaji App <br>
 Fast Results & Instant Withdraw
@@ -205,6 +207,58 @@ renderResults();
 
 setInterval(renderResults, 60000);
 </script>
+  <script>
 
+let count = 142;
+
+setInterval(function(){
+
+count += Math.floor(Math.random()*3);
+
+document.getElementById("downloadCount").innerText = count;
+
+},8000);
+
+</script>
+  <script>
+
+setTimeout(function(){
+document.getElementById("installPopup").style.display="flex";
+},5000);
+
+function closePopup(){
+document.getElementById("installPopup").style.display="none";
+}
+
+</script>
+<div class="install-popup" id="installPopup">
+
+<div class="popup-box">
+
+<img src="favicon.jpg" width="50">
+
+<h3>Install Shree Balaji App</h3>
+
+<p>⚡ Fast Result<br>
+💰 Instant Withdraw</p>
+
+<a href="YOUR_APP_DOWNLOAD_LINK" class="popup-install-btn">
+Download App
+</a>
+
+<span class="popup-close" onclick="closePopup()">Continue Website</span>
+
+</div>
+
+</div>
+  <div class="bottom-install-bar">
+
+<span>📲 Install App For Faster Results</span>
+
+<a href="YOUR_APP_DOWNLOAD_LINK" class="bottom-install-btn">
+INSTALL
+</a>
+
+</div>
 </body>
 </html>
