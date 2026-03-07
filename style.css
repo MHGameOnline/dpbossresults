@@ -156,7 +156,98 @@ animation:installBlink 1.2s infinite;
 @keyframes installBlink{
 
 0%{transform:scale(1);}
+  /* INSTALL POPUP */
+
+.install-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.popup-box{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+width:300px;
+animation:popupShow 0.4s ease;
+}
+
+.popup-box h3{
+margin-bottom:10px;
+}
+
+.popup-install-btn{
+display:inline-block;
+margin-top:10px;
+background:#ff3b3b;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.popup-close{
+margin-top:10px;
+display:block;
+color:#666;
+cursor:pointer;
+}
+
+@keyframes popupShow{
+from{transform:scale(0.8);}
+to{transform:scale(1);}
+}
 50%{transform:scale(1.08);}
 100%{transform:scale(1);}
+
+}
+.download-counter{
+background:#fff3cd;
+padding:8px;
+margin-top:5px;
+text-align:center;
+font-weight:bold;
+border-radius:6px;
+}
+.bottom-install-bar{
+
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111;
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 15px;
+z-index:9998;
+
+}
+
+.bottom-install-bar span{
+
+font-size:14px;
+font-weight:bold;
+
+}
+
+.bottom-install-btn{
+
+background:#00c853;
+color:white;
+padding:8px 16px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
 
 }
