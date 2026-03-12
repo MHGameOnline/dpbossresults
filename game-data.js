@@ -2,51 +2,51 @@ const games = [
   {
     name: "GOA MORNING",
     time: "09:00 AM - 10:00 AM",
-    result: "559-94-789",
+    result: "233-81-489",
     panel: "https://dpbosss.net.in/goamorning-penal-chart.php",
-    lucky: [7, 6, 9]
+    lucky: [7, 8, 9]
   },
   {
     name: "KRANTI MORNING",
-    time: "09:010 AM - 10:10 AM",
-    result: "559-94-789",
+    time: "09:10 AM - 10:10 AM",
+    result: "246-24-400",
     panel: "https://www.asonline.in/jodi-chart.php?name=KRANTI%20MORNING%20&id=207",
     lucky: [7, 6, 9]
   },
   {
     name: "SITA MORN",
-    time: "09:45 AM - 10:45 AM",
-    result: "260-81-678",
+    time: "09:20 AM - 10:20 AM",
+    result: "268-65-249",
     panel: "https://dpbosse.net/pannel/SITAMORNING/81",
-    lucky: [1, 3, 8]
+    lucky: [1, 5, 8]
   },
   {
     name: "SRIDEVI MORNING",
     time: "09:45 AM - 10:45 AM",
-    result: "260-81-678",
+    result: "119-10-118",
     panel: "https://dpboss.boston/panel-chart-record/sridevi-morning.php",
     lucky: [1, 3, 8]
   },
   {
     name: "KARNATAKA DAY",
-    time: "10:00 AM - 11:00 AM",
-    result: "470-13-445",
+    time: "09:50 AM - 10:50 AM",
+    result: "588-13-238",
     panel: "https://sattamatkadpboss.co/karnataka-day-panel-chart.php",
-    lucky: [2, 6, 9]
+    lucky: [2, 1, 9]
   },
   {
     name: "TULSI MORNING",
     time: "10:00 AM - 11:00 AM",
-    result: "470-13-445",
+    result: "500-53-229",
     panel: "https://dpboss.boston/panel-chart-record/tulsi-morning.php",
     lucky: [2, 6, 9]
   },
   {
     name: "RADHA MORNING",
     time: "10:00 AM - 11:00 AM",
-    result: "470-13-445",
+    result: "177-55-500",
     panel: "https://www.sara777.com/radha-morning/pana.html",
-    lucky: [2, 6, 9]
+    lucky: [2, 5, 9]
   },
   {
     name: "MILAN MORNING",
