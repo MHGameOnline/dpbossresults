@@ -128,7 +128,7 @@ const games = [
   {
     name: "PUNA BAZAR",
     time: "01:15 PM - 03:15 PM",
-    result: "127-0*-***",
+    result: "127-07-458",
     panel: "https://dpboss.boston/panel-chart-record/puna-bazar.php",
     lucky: [2, 6, 9]
   },
@@ -156,65 +156,65 @@ const games = [
   {
     name: "MILAN DAY",
     time: "02:55 PM - 04:55 PM",
-    result: "366-5*-***",
+    result: "366-50-118",
     panel: "https://sattamatkadpboss.co/record/milan-day-penal-chart.php",
     lucky: [0, 1, 9]
   },
   {
     name: "RAJDHANI DAY",
     time: "03:00 PM - 05:00 PM",
-    result: "500-5*-***",
+    result: "500-51-245",
     panel: "https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",
     lucky: [2, 3, 8]
   },
   {
     name: "ANDHRA DAY",
     time: "03:15 PM - 05:15 PM",
-    result: "470-13-445",
+    result: "***-**-***",
     panel: "https://dpboss.boston/panel-chart-record/andhra-day.php",
     lucky: [2, 6, 9]
   },
   {
     name: "KRANTI DAY",
-    time: "03:25 PM - 05:25 PM",
-    result: "556-6*-***",
+    time: "03:20 PM - 05:20 PM",
+    result: "556-60-334",
     panel: "https://www.asonline.in/panel-chart.php?name=KRANTI%20DAY%20&id=210",
     lucky: [2, 6, 9]
   },
   {
     name: "SUPREME DAY",
     time: "03:25 PM - 05:25 PM",
-    result: "127-05-140",
+    result: "569-07-458",
     panel: "https://sattamatkadpboss.co/supreme-day-panel-chart.php",
     lucky: [0, 5, 7]
   },
   {
     name: "KALYAN",
-    time: "03:45 PM - 05:45 PM",
-    result: "278-77-250",
+    time: "04:00 PM - 06:00 PM",
+    result: "588-13-256",
     panel: "https://sattamatkadpboss.co/record/kalyan-penal-chart.php",
     lucky: [3, 6, 8]
   },
   {
     name: "SITA NIGHT",
     time: "06:25 PM - 07:25 PM",
-    result: "369-88-116",
+    result: "234-9*-***",
     panel: "https://dpbosse.net/pannel/SITANIGHT/109",
     lucky: [2, 5, 9]
   },
   {
     name: "KARNATAKA NIGHT",
     time: "06:20 PM - 07:20 PM",
-    result: "600-65-113",
+    result: "259-6*-***",
     panel: "https://sattamatkadpboss.co/karnataka-night-panel-chart.php",
-    lucky: [3, 4, 9]
+    lucky: [3, 4, 6]
   },
   {
     name: "KRANTI NIGHT",
     time: "06:50 PM - 07:50 PM",
-    result: "600-65-113",
+    result: "339-5*-***",
     panel: "https://www.asonline.in/panel-chart.php?name=KRANTI%20NIGHT&id=212",
-    lucky: [3, 4, 9]
+    lucky: [3, 5, 9]
   },
   {
     name: "SRIDEVI NIGHT",
