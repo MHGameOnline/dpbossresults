@@ -128,7 +128,7 @@ const games = [
   {
     name: "PUNA BAZAR",
     time: "01:15 PM - 03:15 PM",
-    result: "259-6*-***",
+    result: "259-63-157",
     panel: "https://dpboss.boston/panel-chart-record/puna-bazar.php",
     lucky: [2, 6, 9]
   },
@@ -142,28 +142,28 @@ const games = [
   {
     name: "BOMBAY DAY",
     time: "01:55 PM - 02:55 PM",
-    result: "550-0*-***",
+    result: "550-00-145",
     panel: "https://suratmatka.in/bombay-day-satta-panel-chart.php",
     lucky: [2, 6, 9]
   },
   {
     name: "MADHUR DAY",
     time: "01:20 PM - 02:20 PM",
-    result: "259-61-179",
+    result: "259-61-678",
     panel: "https://sattamatkadpboss.co/madhur-day-panel-chart.php",
     lucky: [3, 6, 7]
   },
   {
     name: "MILAN DAY",
     time: "02:55 PM - 04:55 PM",
-    result: "126-9*-***",
+    result: "126-98-459",
     panel: "https://sattamatkadpboss.co/record/milan-day-penal-chart.php",
     lucky: [0, 1, 9]
   },
   {
     name: "RAJDHANI DAY",
     time: "03:00 PM - 05:00 PM",
-    result: "480-2*-***",
+    result: "480-28-350",
     panel: "https://sattamatkadpboss.co/record/rajdhani-day-penal-chart.php",
     lucky: [2, 3, 8]
   },
@@ -177,21 +177,21 @@ const games = [
   {
     name: "KRANTI DAY",
     time: "03:20 PM - 05:20 PM",
-    result: "339-5*-***",
+    result: "339-54-130",
     panel: "https://www.asonline.in/panel-chart.php?name=KRANTI%20DAY%20&id=210",
     lucky: [2, 6, 9]
   },
   {
     name: "SUPREME DAY",
     time: "03:25 PM - 05:25 PM",
-    result: "569-07-458",
+    result: "459-8*-***",
     panel: "https://sattamatkadpboss.co/supreme-day-panel-chart.php",
     lucky: [0, 5, 7]
   },
   {
     name: "KALYAN",
     time: "04:00 PM - 06:00 PM",
-    result: "588-13-256",
+    result: "368-7*-***",
     panel: "https://sattamatkadpboss.co/record/kalyan-penal-chart.php",
     lucky: [3, 6, 8]
   },
@@ -205,7 +205,7 @@ const games = [
   {
     name: "KARNATAKA NIGHT",
     time: "06:20 PM - 07:20 PM",
-    result: "259-6*-***",
+    result: "***-**-***",
     panel: "https://sattamatkadpboss.co/karnataka-night-panel-chart.php",
     lucky: [3, 4, 6]
   },
