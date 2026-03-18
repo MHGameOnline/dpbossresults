@@ -198,7 +198,7 @@ const games = [
   {
     name: "SITA NIGHT",
     time: "06:25 PM - 07:25 PM",
-    result: "234-9*-***",
+    result: "670-3*-***",
     panel: "https://dpbosse.net/pannel/SITANIGHT/109",
     lucky: [2, 5, 9]
   },
