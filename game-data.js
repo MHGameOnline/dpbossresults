@@ -184,14 +184,14 @@ const games = [
   {
     name: "SUPREME DAY",
     time: "03:25 PM - 05:25 PM",
-    result: "459-8*-***",
+    result: "459-82-200",
     panel: "https://sattamatkadpboss.co/supreme-day-panel-chart.php",
     lucky: [0, 5, 7]
   },
   {
     name: "KALYAN",
     time: "04:00 PM - 06:00 PM",
-    result: "368-7*-***",
+    result: "368-72-480",
     panel: "https://sattamatkadpboss.co/record/kalyan-penal-chart.php",
     lucky: [3, 6, 8]
   },
