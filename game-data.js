@@ -16,84 +16,84 @@ const games = [
   {
     name: "SITA MORN",
     time: "09:20 AM - 10:20 AM",
-    result: "299-03-788",
+    result: "189-80-190",
     panel: "https://dpbosse.net/pannel/SITAMORNING/81",
     lucky: [6, 5, 8]
   },
   {
     name: "SRIDEVI MORNING",
     time: "09:45 AM - 10:45 AM",
-    result: "368-76-457",
+    result: "560-12-246",
     panel: "https://dpboss.boston/panel-chart-record/sridevi-morning.php",
     lucky: [1, 3, 8]
   },
   {
     name: "KARNATAKA DAY",
     time: "09:50 AM - 10:50 AM",
-    result: "559-92-336",
+    result: "189-85-249",
     panel: "https://sattamatkadpboss.co/karnataka-day-panel-chart.php",
     lucky: [0, 1, 9]
   },
   {
     name: "TULSI MORNING",
     time: "10:00 AM - 11:00 AM",
-    result: "160-74-356",
+    result: "128-16-169",
     panel: "https://dpboss.boston/panel-chart-record/tulsi-morning.php",
     lucky: [2, 6, 7]
   },
   {
     name: "RADHA MORNING",
     time: "10:00 AM - 11:00 AM",
-    result: "668-08-233",
+    result: "458-71-489",
     panel: "https://www.sara777.com/radha-morning/pana.html",
     lucky: [2, 5, 0]
   },
   {
     name: "MILAN MORNING",
     time: "10:15 AM - 11:15 AM",
-    result: "479-08-459",
+    result: "137-18-468",
     panel: "https://dpboss.boston/panel-chart-record/milan-morning.php",
     lucky: [2, 6, 7]
   },
   {
     name: "ANDHRA MORNING",
     time: "10:25 AM - 11:25 AM",
-    result: "240-65-690",
+    result: "259-61-146",
     panel: "https://dpboss.boston/panel-chart-record/andhra-morning.php",
     lucky: [5, 6, 9]
   },
   {
     name: "KHATRI MORNING",
     time: "10:45 AM - 11:45 AM",
-    result: "699-40-569",
+    result: "246-20-226",
     panel: "https://satkamatka.com.in/panel-chart-record/khatri-morning",
     lucky: [2, 6, 9]
   },
   {
     name: "JANTA DAY",
     time: "11:05 AM - 12:15 PM",
-    result: "556-65-122",
+    result: "567-88-279",
     panel: "https://www.dpbossonline.com/panel-chart/16/janta-day",
     lucky: [2, 7, 9]
   },
   {
     name: "KALYAN MORN",
     time: "11:40 AM - 12:40 AM",
-    result: "479-02-679",
+    result: "126-97-133",
     panel: "https://sattamatkadpboss.co/record/kalyan-morning-penal-chart.php",
     lucky: [0, 5, 8]
   },
   {
     name: "MADHUR MORN",
     time: "11:05 AM - 12:15 PM",
-    result: "139-37-458",
+    result: "260-88-350",
     panel: "https://sattamatkadpboss.co/madhur-morning-penal-chart.php",
     lucky: [3, 7, 9]
   },
   {
     name: "NANDHINI MORNING",
     time: "11:20 AM - 12:20 PM",
-    result: "447-57-278",
+    result: "799-53-689",
     panel: "https://www.asonline.in/panel-chart.php?name=NANDINI%20MORNING%20&id=209",
     lucky: [2, 6, 9]
   },
