@@ -2,14 +2,14 @@ const games = [
   {
     name: "GOA MORNING",
     time: "09:00 AM - 10:00 AM",
-    result: "339-54-220",
+    result: "550-01-380",
     panel: "https://dpbosss.net.in/goamorning-penal-chart.php",
     lucky: [7, 8, 9]
   },
   {
     name: "KRANTI MORNING",
     time: "09:10 AM - 10:10 AM",
-    result: "599-30-334",
+    result: "148-34-257",
     panel: "https://www.asonline.in/jodi-chart.php?name=KRANTI%20MORNING%20&id=207",
     lucky: [7, 6, 9]
   },
